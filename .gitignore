@@ -26,4 +26,4 @@ dist-ssr
 
 # Project specifics
 # Databases Data Folders
-databases/mongodb/data
+/databases

@@ -5,13 +5,20 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo "Script directory: $SCRIPT_DIR"
 
 # Create required directories
-mkdir -p "../../../databases/mongodb/data" "../../../databases/mongodb/config"
-if [ $? -ne 0 ]; then
-    echo "Error: Failed to create MongoDB directories"
-    exit 1
-fi
+if [ ! -d "../../../databases/mongodb/data" ]; then
+mkdir -p "../../../databases/mongodb/data"
+chmod 777 "../../../databases/mongodb/data"
+
+mkdir -p "../../../databases/mongodb/config"
+chmod 777 "../../../databases/mongodb/config"
 
 echo "# MongoDB" > "../../../databases/mongodb/README.md"
+echo " " >> "../../../databases/mongodb/README.md"
+echo "Connection details:" >> "../../../databases/mongodb/README.md"
+echo "  - Host: localhost" >> "../../../databases/mongodb/README.md"
+echo "  - Port: 27017" >> "../../../databases/mongodb/README.md"
+echo "  - Username: mongoadmin" >> "../../../databases/mongodb/README.md"
+fi
 
 echo "Starting MongoDB container..."
 docker compose -f "$SCRIPT_DIR/docker-compose.yml" up -d
