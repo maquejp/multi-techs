@@ -4,7 +4,8 @@
   "description": "The goal of this project is to displays multiples ways to build the same applications using different technologies.",
   "main": "index.js",
   "scripts": {
-    "setup:guis:web:reactjs:vite": "bun run ./_tools/guis/web/reactjs/vite/setup-project.js"
+    "setup:guis:web:reactjs:vite": "bun run ./_tools/guis/web/reactjs/vite/setup-project.js",
+    "setup:guis:web:angular": "bun run ./_tools/guis/web/angular/setup-project.js"
   },
   "keywords": [],
   "author": "",
