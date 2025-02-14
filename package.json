@@ -1,0 +1,12 @@
+{
+  "name": "multitech",
+  "version": "1.0.0",
+  "description": "The goal of this project is to displays multiples ways to build the same applications using different technologies.",
+  "main": "index.js",
+  "scripts": {
+    "setup:guis:web:reactjs:vite": "bun run ./_tools/guis/web/reactjs/vite/setup-project.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
