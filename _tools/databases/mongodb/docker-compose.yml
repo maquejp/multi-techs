@@ -1,33 +1,22 @@
-version: '3.8'
+version: "3.8"
 
 services:
-  mongodb:
+  multitech-mongodb-server:
     image: mongodb/mongodb-community-server:latest
-    container_name: mongodb-server
+    container_name: multitech-mongodb-server
     environment:
-      MONGO_INITDB_ROOT_USERNAME: mongoadmin
-      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD:-a-nice-admin-password}
+      - MONGO_INITDB_ROOT_USERNAME=mongoadmin
+      - MONGO_INITDB_ROOT_PASSWORD=a-nice-admin-password
     ports:
       - "27017:27017"
     volumes:
-      - mongodb_data:/data/db
-      - mongodb_config:/data/configdb
+      - ../../../databases/mongodb/data:/data/db
+      - ../../../databases/mongodb/config:/data/configdb
+    restart: unless-stopped
     healthcheck:
-      test: ["CMD", "mongosh", "--eval", "'db.runCommand(\"ping\").ok'"]
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
       interval: 10s
       timeout: 5s
-      retries: 5
-      start_period: 40s
-    command: ["mongod", "--bind_ip_all", "--auth"]
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "3"
-    restart: unless-stopped
+      retries: 3
+      start_period: 20s
 
-volumes:
-  mongodb_data:
-    name: mongodb_data
-  mongodb_config:
-    name: mongodb_config

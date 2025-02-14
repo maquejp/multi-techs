@@ -1,10 +1,23 @@
 #!/bin/bash
 
+# Get script directory
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+echo "Script directory: $SCRIPT_DIR"
+
+# Create required directories
+mkdir -p "../../../databases/mongodb/data" "../../../databases/mongodb/config"
+if [ $? -ne 0 ]; then
+    echo "Error: Failed to create MongoDB directories"
+    exit 1
+fi
+
+echo "# MongoDB" > "../../../databases/mongodb/README.md"
+
 echo "Starting MongoDB container..."
-docker-compose -f "$(dirname "$0")/docker-compose.yml" up -d
+docker compose -f "$SCRIPT_DIR/docker-compose.yml" up -d
 
 echo "Waiting for container to be healthy..."
-while [ "$(docker inspect --format='{{.State.Health.Status}}' mongodb-server 2>/dev/null)" != "healthy" ]; do
+while [ "$(docker inspect --format='{{.State.Health.Status}}' multitech-mongodb-server 2>/dev/null)" != "healthy" ]; do
     echo "Waiting for MongoDB to be ready..."
     sleep 5
 done
