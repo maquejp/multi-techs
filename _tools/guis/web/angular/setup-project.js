@@ -30,7 +30,7 @@ if (process.argv.length < 3) {
 
 // Install Angular CLI globally
 console.log(`Installing Angular CLI globally`);
-execSync("npm install -g @angular/cli", { stdio: "inherit" });
+execSync("bun install -g @angular/cli@latest", { stdio: "inherit" });
 
 // Get the project name and path
 const PROJECT_NAME = process.argv[2];
@@ -99,7 +99,7 @@ fs.writeFileSync(indexHtmlPath, indexHtmlContent);
 console.log("Updating the app.component.html...");
 const appHtmlPath = path.join(PROJECT_PATH, "src", "app", "app.component.html");
 const updatedAppHtmlContent =
-    `<div className="h-screen w-full flex items-center justify-center"><h1 className="text-3xl font-bold underline">${FORMATTED_PROJECT_NAME}</h1></div>`;
+    `<div class="h-screen w-full flex items-center justify-center"><h1 class="text-3xl font-bold underline">${FORMATTED_PROJECT_NAME}</h1></div>`;
 fs.writeFileSync(appHtmlPath, updatedAppHtmlContent, "utf-8");
 console.log("✅ The app.component.html has been updated");
 
