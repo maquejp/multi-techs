@@ -24,7 +24,7 @@ console.log("GUIS_BASE_PATH: ", GUIS_BASE_PATH);
 // Validate input arguments
 if (process.argv.length < 3) {
   console.error("Error: Please provide a project name as an argument");
-  console.error("Usage: bun run setup:guis:web:reactjs:vite <project_name>");
+  console.error("Usage: bun run setup:guis:web:reactjs <project_name>");
   process.exit(1);
 }
 
