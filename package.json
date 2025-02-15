@@ -6,7 +6,8 @@
   "scripts": {
     "setup:guis:web:reactjs": "bun run ./_tools/guis/web/reactjs/setup-project.js",
     "setup:guis:web:angular": "bun run ./_tools/guis/web/angular/setup-project.js",
-    "setup:guis:web:svelte": "bun run ./_tools/guis/web/svelte/setup-project.js"
+    "setup:guis:web:svelte": "bun run ./_tools/guis/web/svelte/setup-project.js",
+    "setup:guis:web:vuejs": "bun run ./_tools/guis/web/vuejs/setup-project.js"
   },
   "keywords": [],
   "author": "",
