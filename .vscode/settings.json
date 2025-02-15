@@ -2,6 +2,7 @@
   "conventionalCommits.scopes": [
     "GUIS/WEB/REACTJS/VITE",
     "DATABASE/MONGODB",
-    "GUIS/WEB/ANGULAR"
+    "GUIS/WEB/ANGULAR",
+    "GUIS/WEB/SVELTE/VITE"
   ]
 }
