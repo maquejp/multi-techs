@@ -152,7 +152,7 @@ appTsContent = appTsContent.replace(
 // Replace the content inside the fragment (<>...</>) with the formatted project name
 const updatedAppTsContent = appTsContent.replace(
   /(<>\s*)(.*?)(\s*<\/>)/s, // Match everything inside the fragment, including spaces
-  `<div className="h-screen w-full flex items-center justify-center"><h1 className="text-3xl font-bold underline">${FORMATTED_PROJECT_NAME}</h1></div>`
+  `<div className="h-screen w-full flex items-center justify-center"><h1 className="text-3xl font-bold underline">${FORMATTED_PROJECT_NAME} with reactjs (vite)</h1></div>`
 );
 fs.writeFileSync(appTsPath, updatedAppTsContent, "utf-8");
 console.log("✅ The App.tsx has been updated");
