@@ -30,16 +30,19 @@ The script sets up the following:
 ### Project Structure
 ```
 my-project/
-├── src/
-│   ├── assets/
-│   └── xxx.ts
 ├── public/
-├── index.html
+├── src/
+│   ├── app/
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.css
+├── .postcssrc.json
+├── angular.json
 ├── package.json
+├── README.md
 ├── tsconfig.app.json
 ├── tsconfig.json
-├── tsconfig.node.json
-└── xxx.ts
+└── texconfig.spec.json
 ```
 
 After setup, your project will be ready for development with all modern tooling and best practices in place.
