@@ -8,11 +8,11 @@ This directory contains templates and tools for web application development usin
 
 This toolkit provides setup scripts for the following modern web frameworks:
 
-- **React** - A JavaScript library for building user interfaces
-- **Vue** - The progressive JavaScript framework
 - **Angular** - A platform for building web applications
-- **Svelte** - A radical new approach to building user interfaces
 - **Astro** - The all-in-one web framework designed for speed
+- **React** - A JavaScript library for building user interfaces
+- **Svelte** - A radical new approach to building user interfaces
+- **Vue** - The progressive JavaScript framework
 
 ## Setup Scripts
 
@@ -31,14 +31,20 @@ The setup scripts are designed to:
 To create a new project, run the setup script for your chosen framework:
 
 ```bash
+# For Angular projects
+node _tools/guis/web/angular/setup-project.js my-angular-app
+
+# For Astro projects
+node _tools/guis/web/astro/setup-project.js my-astro-app
+
 # For React projects
 node _tools/guis/web/reactjs/setup-project.js my-react-app
 
+# For Svelte projects
+node _tools/guis/web/svelte/setup-project.js my-svelte-app
+
 # For Vue projects
 node _tools/guis/web/vuejs/setup-project.js my-vue-app
-
-# For Angular projects
-node _tools/guis/web/angular/setup-project.js my-angular-app
 ```
 
 ### What the Scripts Do
