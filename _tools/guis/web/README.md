@@ -2,5 +2,4 @@
 
 This directory contains templates and tools for web application development using frameworks like React, Vue, Angular, and others.
 
-**Path:** `./tools/guis/web`
-
+**Path:** `./_tools/guis/web`
