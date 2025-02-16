@@ -5,6 +5,7 @@
     "GUIS/WEB/ANGULAR",
     "GUIS/WEB/SVELTE/VITE",
     "GUIS/WEB/VUE/VITE",
-    "GUIS/WEB/ASTRO"
+    "GUIS/WEB/ASTRO",
+    "GUIS/WEB"
   ]
 }

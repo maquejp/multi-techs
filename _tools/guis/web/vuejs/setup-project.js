@@ -34,10 +34,8 @@ const PROJECT_PATH = path.join(GUIS_BASE_PATH, PROJECT_NAME);
 console.log("PROJECT_PATH: ", PROJECT_PATH);
 
 // Format the project name for display
-const FORMATTED_PROJECT_NAME = PROJECT_NAME.replace(/_/g, " ").replace(
-  /\b\w/g,
-  (char) => char.toUpperCase()
-);
+const FORMATTED_PROJECT_NAME = PROJECT_NAME.replace(/[_-]/g, " ") // Replace _ and - with spaces
+  .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalize each word
 
 // Check if the project directory already exists
 if (fs.existsSync(PROJECT_PATH)) {
