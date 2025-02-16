@@ -114,7 +114,7 @@ const updatedAppCssContent = '@import "tailwindcss";\n';
 fs.writeFileSync(appCssPath, updatedAppCssContent, "utf-8");
 console.log("✅ The app.css has been updated");
 
-// Updating the App.tsx
+// Updating the App.svelte
 console.log("Updating the App.svelte...");
 const appSveltePath = path.join(PROJECT_PATH, "src", "App.svelte");
 let appSvelteContent = fs.readFileSync(appSveltePath, "utf-8");
