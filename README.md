@@ -76,40 +76,40 @@ The database instances are common for all applications.
 - [House Rental Management](./DOCS/house_rental/README.MD)
 
 ### Directory Structure
-
+```
 .
 ├── _tools
 │   ├── databases
 │   │   ├── mongodb
 │   │   │   ├── docker-compose.yml
-│   │   │   ├── README.md
+│   │   │   ├── [README.md](./_tools/databases/mongodb/README.md)
 │   │   │   ├── start-mongodb.js
 │   │   │   └── start-mongodb.sh
-│   │   └── README.md
+│   │   └── [README.md](./_tools/databases/README.md)
 │   ├── guis
 │   │   ├── desktop
-│   │   │   └── README.md
+│   │   │   └── [README.md](./_tools/guis/desktop/README.md)
 │   │   ├── mobile
-│   │   │   └── README.md
+│   │   │   └── [README.md](./_tools/guis/mobile/README.md)
 │   │   ├── web
 │   │   │   ├── angular
-│   │   │   │   ├── README.md
+│   │   │   │   ├── [README.md](./_tools/guis/web/angular/README.md)
 │   │   │   │   └── setup-project.js
 │   │   │   ├── astro
-│   │   │   │   ├── README.md
+│   │   │   │   ├── [README.md](./_tools/guis/web/astro/README.md)
 │   │   │   │   └── setup-project.js
 │   │   │   ├── reactjs
-│   │   │   │   ├── README.md
+│   │   │   │   ├── [README.md](./_tools/guis/web/reactjs/README.md)
 │   │   │   │   └── setup-project.js
 │   │   │   ├── svelte
-│   │   │   │   ├── README.md
+│   │   │   │   ├── [README.md](./_tools/guis/web/svelte/README.md)
 │   │   │   │   └── setup-project.js
 │   │   │   ├── vuejs
-│   │   │   │   ├── README.md
+│   │   │   │   ├── [README.md](./_tools/guis/web/vuejs/README.md)
 │   │   │   │   └── setup-project.js
-│   │   │   └── README.md
-│   │   └── README.md
-│   └── README.md
+│   │   │   └── [README.md](./_tools/guis/web/README.md)
+│   │   └── [README.md](./_tools/guis/README.md)
+│   └── [README.md](./_tools/README.md)
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
 ├── LICENSE.md
@@ -117,3 +117,4 @@ The database instances are common for all applications.
 └── README.md
 
 12 directories, 25 files
+```
