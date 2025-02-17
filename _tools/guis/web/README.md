@@ -6,13 +6,13 @@ This directory contains templates and tools for web application development usin
 
 ## Available Framework Templates
 
-This toolkit provides setup scripts for the following modern web frameworks:
+For the frontend, it covers as set of javascript frameworks for [Single-page application](https://en.wikipedia.org/wiki/Single-page_application):
 
-- **Angular** - A platform for building web applications
-- **Astro** - The all-in-one web framework designed for speed
-- **React** - A JavaScript library for building user interfaces
-- **Svelte** - A radical new approach to building user interfaces
-- **Vue** - The progressive JavaScript framework
+- [Angular](https://angular.dev/)
+- [Astro](https://astro.build/)
+- [React](https://react.dev/)
+- [Svelte](https://svelte.dev/)
+- [VueJs](https://vuejs.org/)
 
 ## Setup Scripts
 
@@ -54,3 +54,25 @@ The setup scripts perform the following tasks:
 1. Create a new project using the framework's CLI tools
 2. Install and configure essential dependencies
 3. Set up Tailwind CSS for styling
+
+## Directory Structure
+
+.
+├── angular
+│   ├── README.md
+│   └── setup-project.js
+├── astro
+│   ├── README.md
+│   └── setup-project.js
+├── reactjs
+│   ├── README.md
+│   └── setup-project.js
+├── svelte
+│   ├── README.md
+│   └── setup-project.js
+├── vuejs
+│   ├── README.md
+│   └── setup-project.js
+└── README.md
+
+5 directories, 11 files

@@ -35,24 +35,28 @@ Currently implemented frameworks:
 
 ## Directory Structure
 
-```
-guis/
-├── desktop/    # Desktop application templates
-├── mobile/     # Mobile application templates
-└── web/        # Web framework templates
-    └── angular/    # Angular project template and setup
-        ├── setup-project.js
-        └── README.md
-    └── astro/    # Astro project template and setup
-        ├── setup-project.js
-        └── README.md
-    └── reactjs/    # React project template and setup
-        ├── setup-project.js
-        └── README.md
-    └── svelte/    # Svelte project template and setup
-        ├── setup-project.js
-        └── README.md
-    └── vuejs/    # VueJs project template and setup
-        ├── setup-project.js
-        └── README.md
-```
+.
+├── desktop
+│   └── README.md
+├── mobile
+│   └── README.md
+├── web
+│   ├── angular
+│   │   ├── README.md
+│   │   └── setup-project.js
+│   ├── astro
+│   │   ├── README.md
+│   │   └── setup-project.js
+│   ├── reactjs
+│   │   ├── README.md
+│   │   └── setup-project.js
+│   ├── svelte
+│   │   ├── README.md
+│   │   └── setup-project.js
+│   ├── vuejs
+│   │   ├── README.md
+│   │   └── setup-project.js
+│   └── README.md
+└── README.md
+
+8 directories, 14 files

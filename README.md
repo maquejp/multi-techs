@@ -22,7 +22,7 @@ I have started this project in January 2025... And it will takes time to covers 
 
 ### UIs
 
-#### Frontend Web
+#### Frontend Web [](./_tools/guis/web/README.md)
 
 For the frontend, it covers as set of javascript frameworks for [Single-page application](https://en.wikipedia.org/wiki/Single-page_application):
 
@@ -74,3 +74,46 @@ The database instances are common for all applications.
 - [E-Commerce](./DOCS/e_commerce/README.MD)
 - [Food ordering](./apps/food_ordering/README.MD)
 - [House Rental Management](./DOCS/house_rental/README.MD)
+
+### Directory Structure
+
+.
+├── _tools
+│   ├── databases
+│   │   ├── mongodb
+│   │   │   ├── docker-compose.yml
+│   │   │   ├── README.md
+│   │   │   ├── start-mongodb.js
+│   │   │   └── start-mongodb.sh
+│   │   └── README.md
+│   ├── guis
+│   │   ├── desktop
+│   │   │   └── README.md
+│   │   ├── mobile
+│   │   │   └── README.md
+│   │   ├── web
+│   │   │   ├── angular
+│   │   │   │   ├── README.md
+│   │   │   │   └── setup-project.js
+│   │   │   ├── astro
+│   │   │   │   ├── README.md
+│   │   │   │   └── setup-project.js
+│   │   │   ├── reactjs
+│   │   │   │   ├── README.md
+│   │   │   │   └── setup-project.js
+│   │   │   ├── svelte
+│   │   │   │   ├── README.md
+│   │   │   │   └── setup-project.js
+│   │   │   ├── vuejs
+│   │   │   │   ├── README.md
+│   │   │   │   └── setup-project.js
+│   │   │   └── README.md
+│   │   └── README.md
+│   └── README.md
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE.md
+├── package.json
+└── README.md
+
+12 directories, 25 files
