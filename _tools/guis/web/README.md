@@ -56,7 +56,7 @@ The setup scripts perform the following tasks:
 3. Set up Tailwind CSS for styling
 
 ## Directory Structure
-
+```
 .
 ├── angular
 │   ├── README.md
@@ -76,3 +76,4 @@ The setup scripts perform the following tasks:
 └── README.md
 
 5 directories, 11 files
+```

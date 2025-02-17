@@ -32,21 +32,27 @@ This will create a new project in the a base path directory `[multitech]/guis/we
 
 ### Project Structure
 ```
-my-svelte-project/
-├── src/
-│   ├── lib/
-│   │   ├── components/
-│   │   └── assets/
-│   ├── routes/
-│   ├── app.html
-│   └── app.d.ts
-├── static/
-├── tests/
+my-svelte-project
+├── public
+│   └── vite.svg
+├── src
+│   ├── assets
+│   │   └── svelte.svg
+│   ├── lib
+│   │   └── Counter.svelte
+│   ├── app.css
+│   ├── App.svelte
+│   ├── main.ts
+│   └── vite-env.d.ts
+├── bun.lockb
+├── index.html
 ├── package.json
+├── README.md
 ├── svelte.config.js
+├── tsconfig.app.json
 ├── tsconfig.json
-├── vite.config.ts
-└── tailwind.config.js
-```
+├── tsconfig.node.json
+└── vite.config.ts
 
-After setup, your project will be ready for development with all modern tooling and best practices in place.
+4 directories, 16 files
+```

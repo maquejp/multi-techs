@@ -34,7 +34,7 @@ Currently implemented frameworks:
 - Built-in best practices
 
 ## Directory Structure
-
+```
 .
 ├── desktop
 │   └── README.md
@@ -60,3 +60,4 @@ Currently implemented frameworks:
 └── README.md
 
 8 directories, 14 files
+```

@@ -30,20 +30,27 @@ This will create a new project in the a base path directory `[multitech]/guis/we
 
 ### Project Structure
 ```
-my-angular-project/
-├── public/
-├── src/
-│   ├── app/
-│   ├── index.html
-│   ├── main.ts
-│   └── styles.css
-├── .postcssrc.json
+my-angular-project
+├── public
+│   └── favicon.ico
+├── src
+│   ├── app
+│   │   ├── app.component.css
+│   │   ├── app.component.html
+│   │   ├── app.component.spec.ts
+│   │   ├── app.component.ts
+│   │   ├── app.config.ts
+│   │   └── app.routes.ts
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.css
 ├── angular.json
+├── bun.lockb
 ├── package.json
 ├── README.md
 ├── tsconfig.app.json
 ├── tsconfig.json
-└── texconfig.spec.json
-```
+└── tsconfig.spec.json
 
-After setup, your project will be ready for development with all modern tooling and best practices in place.
+3 directories, 17 files
+```

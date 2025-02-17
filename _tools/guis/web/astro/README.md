@@ -31,19 +31,26 @@ This will create a new project in the a base path directory `[multitech]/guis/we
 
 ### Project Structure
 ```
-my-astro-project/
-├── public/
-├── src/
-│   ├── components/
-│   ├── layouts/
-│   ├── pages/
-│   ├── styles/
-│   └── env.d.ts
+my-astro-project
+├── public
+│   └── favicon.svg
+├── src
+│   ├── assets
+│   │   ├── astro.svg
+│   │   └── background.svg
+│   ├── components
+│   │   └── Welcome.astro
+│   ├── layouts
+│   │   └── Layout.astro
+│   ├── pages
+│   │   └── index.astro
+│   └── styles
+│       └── global.css
 ├── astro.config.mjs
+├── bun.lockb
 ├── package.json
-├── tsconfig.json
-├── tailwind.config.js
-└── README.md
-```
+├── README.md
+└── tsconfig.json
 
-After setup, your project will be ready for development with all modern tooling and best practices in place.
+7 directories, 12 files
+```

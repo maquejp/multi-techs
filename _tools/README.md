@@ -14,6 +14,7 @@ This directory contains various tools and templates for setting up different typ
   - `web/` - Web application templates (React, Vue, Angular, etc.) [more](./guis/web/README.md)
 
 ### Directory Structure
+```
 .
 ├── databases
 │   ├── mongodb
@@ -48,3 +49,4 @@ This directory contains various tools and templates for setting up different typ
 └── README.md
 
 11 directories, 20 files
+```

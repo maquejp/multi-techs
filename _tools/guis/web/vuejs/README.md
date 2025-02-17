@@ -31,22 +31,43 @@ This will create a new project in the a base path directory `[multitech]/guis/we
 
 ### Project Structure
 ```
-my-vuejs-project/
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── router/
-│   ├── stores/
-│   ├── views/
-│   ├── App.vue
-│   └── main.ts
-├── test/
+my-vuejs-project
+├── public
+│   └── favicon.ico
+├── src
+│   ├── assets
+│   │   ├── base.css
+│   │   ├── logo.svg
+│   │   └── main.css
+│   ├── components
+│   │   ├── icons
+│   │   │   ├── IconCommunity.vue
+│   │   │   ├── IconDocumentation.vue
+│   │   │   ├── IconEcosystem.vue
+│   │   │   ├── IconSupport.vue
+│   │   │   └── IconTooling.vue
+│   │   ├── HelloWorld.vue
+│   │   ├── TheWelcome.vue
+│   │   └── WelcomeItem.vue
+│   ├── router
+│   │   └── index.ts
+│   ├── stores
+│   │   └── counter.ts
+│   ├── views
+│   │   ├── AboutView.vue
+│   │   └── HomeView.vue
+│   ├── App.vue
+│   └── main.ts
+├── bun.lockb
+├── env.d.ts
+├── eslint.config.ts
 ├── index.html
 ├── package.json
+├── README.md
+├── tsconfig.app.json
 ├── tsconfig.json
-├── vite.config.ts
-└── tailwind.config.js
-```
+├── tsconfig.node.json
+└── vite.config.ts
 
-After setup, your project will be ready for development with all modern tooling and best practices in place.
+8 directories, 28 files
+```

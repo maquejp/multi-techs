@@ -31,22 +31,26 @@ This will create a new project in the a base path directory `[multitech]/guis/we
 
 ### Project Structure
 ```
-my-reactjs-project/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── App.css
-│   ├── App.tsx
-│   ├── index.css
-│   ├── main.tsx
-│   └── vite-env.d.ts
-├── public/
+my-reactjs-project
+├── public
+│   └── vite.svg
+├── src
+│   ├── assets
+│   │   └── react.svg
+│   ├── App.css
+│   ├── App.tsx
+│   ├── index.css
+│   ├── main.tsx
+│   └── vite-env.d.ts
+├── bun.lockb
+├── eslint.config.js
 ├── index.html
 ├── package.json
+├── README.md
 ├── tsconfig.app.json
 ├── tsconfig.json
 ├── tsconfig.node.json
 └── vite.config.ts
-```
 
-After setup, your project will be ready for development with all modern tooling and best practices in place.
+3 directories, 16 files
+```
