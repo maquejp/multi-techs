@@ -1,22 +1,21 @@
-# Astro Project Setup Script
+# Project Setup Script: Astro
 
-This script sets up a new Astro project with TypeScript support and additional configurations for modern web development.
+This script automates the setup of a new Astro project, configured with TypeScript and TailwindCSS. It streamlines the development setup process by handling all necessary installations and configurations automatically.
 
 ## Prerequisites
 
 - Node.js 16.x or later
 - npm 7.x or later
-- Git
 
 ## Usage
 
-Run the setup script from the root directory:
+Run the script with a project name as an argument:
 
 ```bash
-node _tools/guis/web/astro/setup-project.js my-astro-app
+node setup-project.js my-astro-project
 ```
 
-This will create a new Astro project in the `my-astro-app` directory.
+This will create a new project in the a base path directory `[multitech]/guis/web/astro/my-astro-project`.
 
 ## What Gets Installed and Configured
 
@@ -26,16 +25,13 @@ This will create a new Astro project in the `my-astro-app` directory.
 - Built-in Islands Architecture
 
 ### Additional Configurations
-- TailwindCSS for styling
-- ESLint and Prettier for code formatting
-- Vitest for unit testing
-- Playwright for E2E testing
-- Image optimization
-- Markdown/MDX support
+- Basic project structure
+- TailwindCSS configuration file
+- Default styling with TailwindCSS
 
 ### Project Structure
 ```
-my-astro-app/
+my-astro-project/
 ├── public/
 ├── src/
 │   ├── components/
@@ -50,3 +46,4 @@ my-astro-app/
 └── README.md
 ```
 
+After setup, your project will be ready for development with all modern tooling and best practices in place.

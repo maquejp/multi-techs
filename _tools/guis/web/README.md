@@ -54,8 +54,3 @@ The setup scripts perform the following tasks:
 1. Create a new project using the framework's CLI tools
 2. Install and configure essential dependencies
 3. Set up Tailwind CSS for styling
-4. Configure testing tools and environment
-5. Add recommended VS Code settings and extensions
-6. Initialize Git repository with a proper .gitignore
-7. Create a basic project structure with example components
-8. Add npm scripts for development, building, and testing

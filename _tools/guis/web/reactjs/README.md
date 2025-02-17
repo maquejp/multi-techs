@@ -1,22 +1,23 @@
-# Vite React Project Setup Script
+# Project Setup Script: ReactJs
 
-## Description
-This script automates the setup of a new React project using Vite, configured with TypeScript and TailwindCSS. It streamlines the development setup process by handling all necessary installations and configurations automatically.
+This script automates the setup of a new ReactJS project using Vite, configured with TypeScript and TailwindCSS. It streamlines the development setup process by handling all necessary installations and configurations automatically.
 
 ## Prerequisites
+
 - Node.js (v16 or higher)
 - npm (v7 or higher)
 
 ## Usage
+
 Run the script with a project name as an argument:
+
 ```bash
-./setup-project.js my-project
+node setup-project.js my-reactjs-project
 ```
-This will create a new project in a directory named `my-project` in your current location.
+
+This will create a new project in the a base path directory `[multitech]/guis/web/reactjs/my-reactjs-project`.
 
 ## What Gets Installed and Configured
-
-The script sets up the following:
 
 ### Core Technologies
 - Vite as the build tool
@@ -24,13 +25,13 @@ The script sets up the following:
 - TailwindCSS for styling
 
 ### Additional Configurations
-- TailwindCSS configuration file
 - Basic project structure
+- TailwindCSS configuration file
 - Default styling with TailwindCSS
 
 ### Project Structure
 ```
-my-project/
+my-reactjs-project/
 ├── src/
 │   ├── assets/
 │   ├── components/
@@ -49,4 +50,3 @@ my-project/
 ```
 
 After setup, your project will be ready for development with all modern tooling and best practices in place.
-

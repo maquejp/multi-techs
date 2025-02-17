@@ -1,22 +1,21 @@
-# Svelte Project Setup Script
+# Project Setup Script: Svelte
 
-This script sets up a new SvelteKit project with TypeScript support and additional configurations for modern web development.
+This script automates the setup of a new Svelte project using Vite, configured with TypeScript and TailwindCSS. It streamlines the development setup process by handling all necessary installations and configurations automatically.
 
 ## Prerequisites
 
 - Node.js 16.x or later
 - npm 7.x or later
-- Git
 
 ## Usage
 
 Run the setup script from the root directory:
 
 ```bash
-node _tools/guis/web/svelte/setup-project.js my-svelte-app
+node setup-project.js my-svelte-project
 ```
 
-This will create a new SvelteKit project in the `my-svelte-app` directory.
+This will create a new project in the a base path directory `[multitech]/guis/web/svelte/my-svelte-project`.
 
 ## What Gets Installed and Configured
 
@@ -27,14 +26,13 @@ This will create a new SvelteKit project in the `my-svelte-app` directory.
 - Vite (Build tool)
 
 ### Additional Configurations
-- TailwindCSS for styling
-- ESLint and Prettier for code formatting
-- Vitest for unit testing
-- Playwright for E2E testing
+- Basic project structure
+- TailwindCSS configuration file
+- Default styling with TailwindCSS
 
 ### Project Structure
 ```
-my-svelte-app/
+my-svelte-project/
 ├── src/
 │   ├── lib/
 │   │   ├── components/
@@ -51,3 +49,4 @@ my-svelte-app/
 └── tailwind.config.js
 ```
 
+After setup, your project will be ready for development with all modern tooling and best practices in place.

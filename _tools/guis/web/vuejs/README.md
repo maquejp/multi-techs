@@ -1,22 +1,21 @@
-# Vue.js Project Setup Script
+# Project Setup Script: Vue.js
 
-This script sets up a new Vue.js project with TypeScript support and additional configurations for modern web development.
+This script automates the setup of a new Vue.js project using Vite, configured with TypeScript and TailwindCSS. It streamlines the development setup process by handling all necessary installations and configurations automatically.
 
 ## Prerequisites
 
 - Node.js 16.x or later
 - npm 7.x or later
-- Git
 
 ## Usage
 
 Run the setup script from the root directory:
 
 ```bash
-node _tools/guis/web/vuejs/setup-project.js my-vue-app
+node setup-project.js my-vuejs-project
 ```
 
-This will create a new Vue.js project in the `my-vue-app` directory.
+This will create a new project in the a base path directory `[multitech]/guis/web/vuejs/my-vuejs-project`.
 
 ## What Gets Installed and Configured
 
@@ -26,16 +25,13 @@ This will create a new Vue.js project in the `my-vue-app` directory.
 - Vite (Build tool)
 
 ### Additional Configurations
-- TailwindCSS for styling
-- Vue Router for navigation
-- Pinia for state management
-- ESLint and Prettier for code formatting
-- Jest for unit testing
-- Cypress for E2E testing
+- Basic project structure
+- TailwindCSS configuration file
+- Default styling with TailwindCSS
 
 ### Project Structure
 ```
-my-vue-app/
+my-vuejs-project/
 ├── public/
 ├── src/
 │   ├── assets/
@@ -53,3 +49,4 @@ my-vue-app/
 └── tailwind.config.js
 ```
 
+After setup, your project will be ready for development with all modern tooling and best practices in place.
