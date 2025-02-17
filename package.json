@@ -4,6 +4,7 @@
   "description": "The goal of this project is to displays multiples ways to build the same applications using different technologies.",
   "main": "index.js",
   "scripts": {
+    "common:generate:fs": "bun run ./_tools/common/add-folder-struc-to-md.js",
     "setup:guis:web:reactjs": "bun run ./_tools/guis/web/reactjs/setup-project.js",
     "setup:guis:web:angular": "bun run ./_tools/guis/web/angular/setup-project.js",
     "setup:guis:web:svelte": "bun run ./_tools/guis/web/svelte/setup-project.js",
