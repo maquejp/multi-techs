@@ -16,9 +16,13 @@ This directory contains Docker Compose configurations and shell scripts for sett
 │   ├──  📄 docker-compose.yml
 │   ├──  📄 <a href="mongodb/README.md">README.md</a>
 │   └──  📄 start-mongodb.sh
+├──  📂 postgresql
+│   ├──  📄 docker-compose.yml
+│   ├──  📄 <a href="postgresql/README.md">README.md</a>
+│   └──  📄 start-postgresql.sh
 └──  📄 <a href="README.md">README.md</a>
 
 
-📂 Total Folders: 1
-📄 Total Files: 4
+📂 Total Folders: 2
+📄 Total Files: 7
 </pre>

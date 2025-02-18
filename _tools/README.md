@@ -23,8 +23,11 @@ This directory contains various tools and templates for setting up different typ
 │   ├──  📂 mongodb
 │   │   ├──  📄 docker-compose.yml
 │   │   ├──  📄 <a href="databases/mongodb/README.md">README.md</a>
-│   │   ├──  📄 start-mongodb.js
 │   │   └──  📄 start-mongodb.sh
+│   ├──  📂 postgresql
+│   │   ├──  📄 docker-compose.yml
+│   │   ├──  📄 <a href="databases/postgresql/README.md">README.md</a>
+│   │   └──  📄 start-postgresql.sh
 │   └──  📄 <a href="databases/README.md">README.md</a>
 ├──  📂 guis
 │   ├──  📂 desktop
@@ -52,6 +55,6 @@ This directory contains various tools and templates for setting up different typ
 └──  📄 <a href="README.md">README.md</a>
 
 
-📂 Total Folders: 12
-📄 Total Files: 22
+📂 Total Folders: 13
+📄 Total Files: 24
 </pre>
