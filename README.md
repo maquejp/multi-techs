@@ -58,7 +58,7 @@ For the database, it covers a set of technologies:
 
 - [Postgresql](https://www.postgresql.org/)
 - [MariaDB](https://mariadb.org/)
-- [Oracle Database](https://www.oracle.com/database/technologies/appdev/xe.html)
+- [Oracle Database XE](https://www.oracle.com/database/technologies/appdev/xe.html)
 - [MongoDB CE](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/)
 
 The database instances are common for all applications.
