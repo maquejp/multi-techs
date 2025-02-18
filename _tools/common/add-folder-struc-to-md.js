@@ -14,14 +14,16 @@ const README_FULL_PATH = process.argv[3];
 console.log("FOLDER_PATH: ", FOLDER_PATH);
 console.log("README_FULL_PATH: ", README_FULL_PATH);
 
+// Variables to count folders and files
+let folderCount = 0;
+let fileCount = 0;
+
 // Recursive function to display folder structure as a tree
 function buildTree(dirPath, depth = 0) {
-    // Prepare the tree output
     let treeOutput = '';
-    const indent = '│   '.repeat(depth);  // Create indentation based on depth
+    const indent = '│   '.repeat(depth);
     const files = fs.readdirSync(dirPath);
 
-    // Sort files and directories
     const directories = [];
     const regularFiles = [];
 
@@ -30,50 +32,54 @@ function buildTree(dirPath, depth = 0) {
         const stats = fs.statSync(fullPath);
 
         if (file === 'node_modules' || file === '.git') {
-            return;  // Skip node_modules and .git directories
+            return;
         }
 
         if (stats.isDirectory()) {
-            directories.push(fullPath);  // Directories
+            directories.push(fullPath);
+            folderCount++;  // Count folders
         } else {
-            regularFiles.push(fullPath);  // Files
+            regularFiles.push(fullPath);
+            fileCount++;  // Count files
         }
     });
 
-    // Sort directories and files alphabetically
-    const sortedItems = [...directories, ...regularFiles].sort((a, b) => {
-        return a.toLowerCase().localeCompare(b.toLowerCase());  // Alphabetical sorting
-    });
+    const sortedItems = [...directories, ...regularFiles].sort((a, b) =>
+        a.toLowerCase().localeCompare(b.toLowerCase())
+    );
 
-    // Iterate through sorted items
     sortedItems.forEach((item, index) => {
         const isLastItem = index === sortedItems.length - 1;
         const connector = isLastItem ? '└── ' : '├── ';
         const displayName = path.basename(item);
         const isDirectory = fs.statSync(item).isDirectory();
 
-        // Handle README.md links only
-        if (displayName === 'README.md' || displayName === 'CODE_OF_CONDUCT.md' || displayName === 'CONTRIBUTING.md' || displayName === 'LICENSE.md') {
+        // Add icons
+        const icon = isDirectory ? "📂" : "📄";
+
+        if (["README.md", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "LICENSE.md"].includes(displayName)) {
             const relativePath = path.relative(FOLDER_PATH, item);
-            const markdownLink = `<a href="${relativePath}">${displayName}</a>`;  // Markdown link format
-            treeOutput += `${indent}${connector}${markdownLink}\n`;
+            const markdownLink = `<a href="${relativePath}">${displayName}</a>`;
+            treeOutput += `${indent}${connector} ${icon} ${markdownLink}\n`;
         } else {
-            treeOutput += `${indent}${connector}${isDirectory ? "<b>" : ""}${displayName}${isDirectory ? "</b>" : ""}\n`;  // Regular file/folder display
+            treeOutput += `${indent}${connector} ${icon} ${displayName}\n`;
         }
 
-        // Recurse into directories
         if (isDirectory) {
-            treeOutput += buildTree(item, depth + 1);  // Recursion for subdirectories
+            treeOutput += buildTree(item, depth + 1);
         }
     });
 
     return treeOutput;
 }
 
-// Start building the tree from the given FOLDER_PATH
+// Build the directory tree
 const treeStructure = buildTree(FOLDER_PATH);
 
-// Append the generated folder structure with links to the README file
-fs.appendFileSync(README_FULL_PATH, `\n### Directory Structure\n<pre>\n${treeStructure}\n</pre>\n`);
+// Summary inside <pre> tag
+const summary = `\n📂 Total Folders: ${folderCount}\n📄 Total Files: ${fileCount}\n`;
 
-console.log("Folder structure with links for README.md files has been appended to the README file.");
+// Append the tree structure and summary inside a div with a white background
+fs.appendFileSync(README_FULL_PATH, `\n### Directory Structure\n<pre style="background-color: white; padding: 10px;">\n${treeStructure}\n${summary}</pre>\n`);
+
+console.log("Folder structure with links, icons, summary, and white background has been appended to the README file.");
