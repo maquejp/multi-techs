@@ -56,9 +56,9 @@ For the backend it uses APIs, it covers a set of technologies / frameworks:
 
 For the database, it covers a set of technologies:
 
-- [Postgresql](./databases/postgres/README.MD)
-- [MariaDB](./databases/mariadb/README.MD)
-- [Oracle Database](./databases/oracle/README.MD)
+- [Postgresql](https://www.postgresql.org/)
+- [MariaDB](https://mariadb.org/)
+- [Oracle Database](https://www.oracle.com/database/technologies/appdev/xe.html)
 - [MongoDB CE](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/)
 
 The database instances are common for all applications.
@@ -76,6 +76,8 @@ The database instances are common for all applications.
 - E-Commerce
 - Food ordering
 - House Rental Management
+
+[test](./_tools/databases/mongodb/README.md)
 
 ### Directory Structure
 <pre style="background-color: white; padding: 10px;">
