@@ -13,7 +13,6 @@ This directory contains various tools and templates for setting up different typ
   - `mobile/` - Mobile application templates (React Native, Flutter, etc.) [more](./guis/mobile/README.md)
   - `web/` - Web application templates (React, Vue, Angular, etc.) [more](./guis/web/README.md)
 
-
 ### Directory Structure
 <pre style="background-color: white; padding: 10px;">
 ├──  📂 common
@@ -28,6 +27,10 @@ This directory contains various tools and templates for setting up different typ
 │   │   ├──  📄 docker-compose.yml
 │   │   ├──  📄 <a href="databases/mongodb/README.md">README.md</a>
 │   │   └──  📄 start-mongodb.sh
+│   ├──  📂 oracleenterprise
+│   │   ├──  📄 docker-compose.yml
+│   │   ├──  📄 <a href="databases/oracleenterprise/README.md">README.md</a>
+│   │   └──  📄 start-oracleenterprise.sh
 │   ├──  📂 postgresql
 │   │   ├──  📄 docker-compose.yml
 │   │   ├──  📄 <a href="databases/postgresql/README.md">README.md</a>
@@ -59,6 +62,6 @@ This directory contains various tools and templates for setting up different typ
 └──  📄 <a href="README.md">README.md</a>
 
 
-📂 Total Folders: 14
-📄 Total Files: 27
+📂 Total Folders: 15
+📄 Total Files: 30
 </pre>

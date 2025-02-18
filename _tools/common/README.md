@@ -15,7 +15,7 @@ bun run common:generate:fs ./_tools/databases ./_tools/databases/README.md
 bun run common:generate:fs ./_tools/databases/mongodb ./_tools/databases/mongodb/README.md
 bun run common:generate:fs ./_tools/databases/postgresql ./_tools/databases/postgresql/README.md
 bun run common:generate:fs ./_tools/databases/mariadb ./_tools/databases/mariadb/README.md
-bun run common:generate:fs ./_tools/databases/oraclexe ./_tools/databases/oraclexe/README.md
+bun run common:generate:fs ./_tools/databases/oracleenterprise ./_tools/databases/oracleenterprise/README.md
 bun run common:generate:fs ./_tools/guis ./_tools/guis/README.md
 bun run common:generate:fs ./_tools/guis/desktop ./_tools/guis/desktop/README.md
 bun run common:generate:fs ./_tools/guis/mobile ./_tools/guis/mobile/README.md
