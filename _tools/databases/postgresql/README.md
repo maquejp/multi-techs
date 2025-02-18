@@ -2,7 +2,7 @@
 
 This directory contains the scripts and the configuration file for instantiating a docker container hosting a postgresql server
 
-[MongoDB CE](https://www.postgresql.org/)
+[POSTGRESQL](https://www.postgresql.org/)
 
 **Path:** `./tools/databases/postgresql`
 
