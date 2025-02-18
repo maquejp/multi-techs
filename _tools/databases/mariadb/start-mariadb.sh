@@ -5,16 +5,16 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo "Script directory: $SCRIPT_DIR"
 
 # Create required directories
-if [ ! -d "../../../databases/mariadb/data" ]; then
-mkdir -p "../../../databases/mariadb/data"
-chmod 777 "../../../databases/mariadb/data"
+if [ ! -d "./databases/mariadb/data" ]; then
+mkdir -p "./databases/mariadb/data"
+chmod 777 "./databases/mariadb/data"
 
-echo "# mariadb" > "../../../databases/mariadb/README.md"
-echo " " >> "../../../databases/mariadb/README.md"
-echo "Connection details:" >> "../../../databases/mariadb/README.md"
-echo "  - Host: localhost" >> "../../../databases/mariadb/README.md"
-echo "  - Port: 3306" >> "../../../databases/mariadb/README.md"
-echo "  - Username: mariadbadmin" >> "../../../databases/mariadb/README.md"
+echo "# mariadb" > "./databases/mariadb/README.md"
+echo " " >> "./databases/mariadb/README.md"
+echo "Connection details:" >> "./databases/mariadb/README.md"
+echo "  - Host: localhost" >> "./databases/mariadb/README.md"
+echo "  - Port: 3306" >> "./databases/mariadb/README.md"
+echo "  - Username: mariadbadmin" >> "./databases/mariadb/README.md"
 fi
 
 echo "Starting mariadb container..."
