@@ -76,8 +76,6 @@ The database instances are common for all applications.
 - E-Commerce
 - Food ordering
 - House Rental Management
-  
-[test](_tools/common/README.md)
 
 ### Directory Structure
 <pre style="background-color: white; padding: 10px;">
