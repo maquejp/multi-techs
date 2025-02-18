@@ -2,6 +2,8 @@
 
 This script automates the setup of a new Svelte project using Vite, configured with TypeScript and TailwindCSS. It streamlines the development setup process by handling all necessary installations and configurations automatically.
 
+**Path:** `./_tools/guis/web/svelte`
+
 ## Prerequisites
 
 - Node.js 16.x or later
@@ -30,3 +32,35 @@ This will create a new project in the a base path directory `[multitech]/guis/we
 - TailwindCSS configuration file
 - Default styling with TailwindCSS
 
+
+### Directory Structure
+<pre style="background-color: white; padding: 10px;">
+└──  📂 my-svelte-project
+│   ├──  📄 .gitignore
+│   ├──  📂 .vscode
+│   │   └──  📄 extensions.json
+│   ├──  📄 bun.lockb
+│   ├──  📄 index.html
+│   ├──  📄 package.json
+│   ├──  📂 public
+│   │   └──  📄 vite.svg
+│   ├──  📄 <a href="my-svelte-project/README.md">README.md</a>
+│   ├──  📂 src
+│   │   ├──  📄 app.css
+│   │   ├──  📄 App.svelte
+│   │   ├──  📂 assets
+│   │   │   └──  📄 svelte.svg
+│   │   ├──  📂 lib
+│   │   │   └──  📄 Counter.svelte
+│   │   ├──  📄 main.ts
+│   │   └──  📄 vite-env.d.ts
+│   ├──  📄 svelte.config.js
+│   ├──  📄 tsconfig.app.json
+│   ├──  📄 tsconfig.json
+│   ├──  📄 tsconfig.node.json
+│   └──  📄 vite.config.ts
+
+
+📂 Total Folders: 6
+📄 Total Files: 18
+</pre>

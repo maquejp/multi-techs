@@ -31,7 +31,7 @@ function buildTree(dirPath, depth = 0) {
         const fullPath = path.join(dirPath, file);
         const stats = fs.statSync(fullPath);
 
-        if (file === 'node_modules' || file === '.git') {
+        if (file === 'node_modules' || file === '.git' || file === '.angular' || file === '.astro') {
             return;
         }
 

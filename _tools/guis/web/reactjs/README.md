@@ -2,6 +2,8 @@
 
 This script automates the setup of a new ReactJS project using Vite, configured with TypeScript and TailwindCSS. It streamlines the development setup process by handling all necessary installations and configurations automatically.
 
+**Path:** `./_tools/guis/web/reactjs`
+
 ## Prerequisites
 
 - Node.js (v16 or higher)
@@ -29,3 +31,32 @@ This will create a new project in the a base path directory `[multitech]/guis/we
 - TailwindCSS configuration file
 - Default styling with TailwindCSS
 
+
+### Directory Structure
+<pre style="background-color: white; padding: 10px;">
+└──  📂 my-reactjs-project
+│   ├──  📄 .gitignore
+│   ├──  📄 bun.lockb
+│   ├──  📄 eslint.config.js
+│   ├──  📄 index.html
+│   ├──  📄 package.json
+│   ├──  📂 public
+│   │   └──  📄 vite.svg
+│   ├──  📄 <a href="my-reactjs-project/README.md">README.md</a>
+│   ├──  📂 src
+│   │   ├──  📄 App.css
+│   │   ├──  📄 App.tsx
+│   │   ├──  📂 assets
+│   │   │   └──  📄 react.svg
+│   │   ├──  📄 index.css
+│   │   ├──  📄 main.tsx
+│   │   └──  📄 vite-env.d.ts
+│   ├──  📄 tsconfig.app.json
+│   ├──  📄 tsconfig.json
+│   ├──  📄 tsconfig.node.json
+│   └──  📄 vite.config.ts
+
+
+📂 Total Folders: 4
+📄 Total Files: 17
+</pre>

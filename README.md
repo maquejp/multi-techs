@@ -4,6 +4,8 @@ The goal of this project is to displays multiples ways to build the same applica
 
 I have started this project in January 2025... And it will takes time to covers everything 😄 😄
 
+**Path:** `.`
+
 ## Technologies covered
 
 ## Design
@@ -75,3 +77,55 @@ The database instances are common for all applications.
 - [Food ordering](./apps/food_ordering/README.MD)
 - [House Rental Management](./DOCS/house_rental/README.MD)
   
+
+### Directory Structure
+<pre style="background-color: white; padding: 10px;">
+├──  📂 _tools
+│   ├──  📂 common
+│   │   ├──  📄 add-folder-struc-to-md.js
+│   │   └──  📄 <a href="_tools/common/README.md">README.md</a>
+│   ├──  📂 databases
+│   │   ├──  📂 mongodb
+│   │   │   ├──  📄 docker-compose.yml
+│   │   │   ├──  📄 <a href="_tools/databases/mongodb/README.md">README.md</a>
+│   │   │   ├──  📄 start-mongodb.js
+│   │   │   └──  📄 start-mongodb.sh
+│   │   └──  📄 <a href="_tools/databases/README.md">README.md</a>
+│   ├──  📂 guis
+│   │   ├──  📂 desktop
+│   │   │   └──  📄 <a href="_tools/guis/desktop/README.md">README.md</a>
+│   │   ├──  📂 mobile
+│   │   │   └──  📄 <a href="_tools/guis/mobile/README.md">README.md</a>
+│   │   ├──  📄 <a href="_tools/guis/README.md">README.md</a>
+│   │   └──  📂 web
+│   │   │   ├──  📂 angular
+│   │   │   │   ├──  📄 <a href="_tools/guis/web/angular/README.md">README.md</a>
+│   │   │   │   └──  📄 setup-project.js
+│   │   │   ├──  📂 astro
+│   │   │   │   ├──  📄 <a href="_tools/guis/web/astro/README.md">README.md</a>
+│   │   │   │   └──  📄 setup-project.js
+│   │   │   ├──  📂 reactjs
+│   │   │   │   ├──  📄 <a href="_tools/guis/web/reactjs/README.md">README.md</a>
+│   │   │   │   └──  📄 setup-project.js
+│   │   │   ├──  📄 <a href="_tools/guis/web/README.md">README.md</a>
+│   │   │   ├──  📂 svelte
+│   │   │   │   ├──  📄 <a href="_tools/guis/web/svelte/README.md">README.md</a>
+│   │   │   │   └──  📄 setup-project.js
+│   │   │   └──  📂 vuejs
+│   │   │   │   ├──  📄 <a href="_tools/guis/web/vuejs/README.md">README.md</a>
+│   │   │   │   └──  📄 setup-project.js
+│   └──  📄 <a href="_tools/README.md">README.md</a>
+├──  📄 .gitignore
+├──  📂 .vscode
+│   ├──  📄 extensions.json
+│   └──  📄 settings.json
+├──  📄 <a href="CODE_OF_CONDUCT.md">CODE_OF_CONDUCT.md</a>
+├──  📄 <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>
+├──  📄 <a href="LICENSE.md">LICENSE.md</a>
+├──  📄 package.json
+└──  📄 <a href="README.md">README.md</a>
+
+
+📂 Total Folders: 14
+📄 Total Files: 30
+</pre>

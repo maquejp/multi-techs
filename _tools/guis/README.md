@@ -33,3 +33,33 @@ Currently implemented frameworks:
 - Preconfigured development environment
 - Built-in best practices
 
+
+### Directory Structure
+<pre style="background-color: white; padding: 10px;">
+├──  📂 desktop
+│   └──  📄 <a href="desktop/README.md">README.md</a>
+├──  📂 mobile
+│   └──  📄 <a href="mobile/README.md">README.md</a>
+├──  📄 <a href="README.md">README.md</a>
+└──  📂 web
+│   ├──  📂 angular
+│   │   ├──  📄 <a href="web/angular/README.md">README.md</a>
+│   │   └──  📄 setup-project.js
+│   ├──  📂 astro
+│   │   ├──  📄 <a href="web/astro/README.md">README.md</a>
+│   │   └──  📄 setup-project.js
+│   ├──  📂 reactjs
+│   │   ├──  📄 <a href="web/reactjs/README.md">README.md</a>
+│   │   └──  📄 setup-project.js
+│   ├──  📄 <a href="web/README.md">README.md</a>
+│   ├──  📂 svelte
+│   │   ├──  📄 <a href="web/svelte/README.md">README.md</a>
+│   │   └──  📄 setup-project.js
+│   └──  📂 vuejs
+│   │   ├──  📄 <a href="web/vuejs/README.md">README.md</a>
+│   │   └──  📄 setup-project.js
+
+
+📂 Total Folders: 8
+📄 Total Files: 14
+</pre>
