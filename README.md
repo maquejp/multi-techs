@@ -85,6 +85,10 @@ The database instances are common for all applications.
 │   │   ├──  📄 add-folder-struc-to-md.js
 │   │   └──  📄 <a href="_tools/common/README.md">README.md</a>
 │   ├──  📂 databases
+│   │   ├──  📂 mariadb
+│   │   │   ├──  📄 docker-compose.yml
+│   │   │   ├──  📄 <a href="_tools/databases/mariadb/README.md">README.md</a>
+│   │   │   └──  📄 start-mariadb.sh
 │   │   ├──  📂 mongodb
 │   │   │   ├──  📄 docker-compose.yml
 │   │   │   ├──  📄 <a href="_tools/databases/mongodb/README.md">README.md</a>
@@ -129,6 +133,6 @@ The database instances are common for all applications.
 └──  📄 <a href="README.md">README.md</a>
 
 
-📂 Total Folders: 15
-📄 Total Files: 32
+📂 Total Folders: 16
+📄 Total Files: 35
 </pre>

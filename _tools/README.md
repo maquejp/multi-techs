@@ -20,6 +20,10 @@ This directory contains various tools and templates for setting up different typ
 │   ├──  📄 add-folder-struc-to-md.js
 │   └──  📄 <a href="common/README.md">README.md</a>
 ├──  📂 databases
+│   ├──  📂 mariadb
+│   │   ├──  📄 docker-compose.yml
+│   │   ├──  📄 <a href="databases/mariadb/README.md">README.md</a>
+│   │   └──  📄 start-mariadb.sh
 │   ├──  📂 mongodb
 │   │   ├──  📄 docker-compose.yml
 │   │   ├──  📄 <a href="databases/mongodb/README.md">README.md</a>
@@ -55,6 +59,6 @@ This directory contains various tools and templates for setting up different typ
 └──  📄 <a href="README.md">README.md</a>
 
 
-📂 Total Folders: 13
-📄 Total Files: 24
+📂 Total Folders: 14
+📄 Total Files: 27
 </pre>

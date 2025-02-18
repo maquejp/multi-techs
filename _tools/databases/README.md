@@ -12,6 +12,10 @@ This directory contains Docker Compose configurations and shell scripts for sett
 
 ### Directory Structure
 <pre style="background-color: white; padding: 10px;">
+├──  📂 mariadb
+│   ├──  📄 docker-compose.yml
+│   ├──  📄 <a href="mariadb/README.md">README.md</a>
+│   └──  📄 start-mariadb.sh
 ├──  📂 mongodb
 │   ├──  📄 docker-compose.yml
 │   ├──  📄 <a href="mongodb/README.md">README.md</a>
@@ -23,6 +27,6 @@ This directory contains Docker Compose configurations and shell scripts for sett
 └──  📄 <a href="README.md">README.md</a>
 
 
-📂 Total Folders: 2
-📄 Total Files: 7
+📂 Total Folders: 3
+📄 Total Files: 10
 </pre>
