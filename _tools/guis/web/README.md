@@ -55,25 +55,3 @@ The setup scripts perform the following tasks:
 2. Install and configure essential dependencies
 3. Set up Tailwind CSS for styling
 
-## Directory Structure
-```
-.
-├── angular
-│   ├── README.md
-│   └── setup-project.js
-├── astro
-│   ├── README.md
-│   └── setup-project.js
-├── reactjs
-│   ├── README.md
-│   └── setup-project.js
-├── svelte
-│   ├── README.md
-│   └── setup-project.js
-├── vuejs
-│   ├── README.md
-│   └── setup-project.js
-└── README.md
-
-5 directories, 11 files
-```
