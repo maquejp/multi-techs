@@ -53,9 +53,10 @@ function buildTree(dirPath, depth = 0) {
         const isDirectory = fs.statSync(item).isDirectory();
 
         // Handle README.md links only
-        if (displayName === 'README.md') {
+        if (displayName === 'README.md' || displayName === 'CODE_OF_CONDUCT.md' || displayName === 'CONTRIBUTING.md' || displayName === 'LICENSE.md') {
             const relativePath = path.relative(FOLDER_PATH, item);
-            const markdownLink = `[${displayName}](${relativePath})`;  // Markdown link format
+            // const markdownLink = `[${displayName}](${relativePath})`;  // Markdown link format
+            const markdownLink = `<a href="${relativePath}">${displayName}</a>`;  // Markdown link format
             treeOutput += `${indent}${connector}${markdownLink}\n`;
         } else {
             treeOutput += `${indent}${connector}${displayName}\n`;  // Regular file/folder display
@@ -74,6 +75,6 @@ function buildTree(dirPath, depth = 0) {
 const treeStructure = buildTree(FOLDER_PATH);
 
 // Append the generated folder structure with links to the README file
-fs.appendFileSync(README_FULL_PATH, `\n## Folder Structure\n\n${treeStructure}\n`);
+fs.appendFileSync(README_FULL_PATH, `\n### Directory Structure\n<pre>${treeStructure}</pre>\n`);
 
 console.log("Folder structure with links for README.md files has been appended to the README file.");
