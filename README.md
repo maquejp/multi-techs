@@ -1,4 +1,4 @@
-# Multi Technology Demo
+# Multi Technology Project
 
 The goal of this project is to displays multiples ways to build the same applications using different technologies.
 

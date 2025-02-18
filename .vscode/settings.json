@@ -6,6 +6,7 @@
     "GUIS/WEB/SVELTE/VITE",
     "GUIS/WEB/VUE/VITE",
     "GUIS/WEB/ASTRO",
-    "GUIS/WEB"
+    "GUIS/WEB",
+    "GLOBAL"
   ]
 }
