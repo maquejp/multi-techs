@@ -15,11 +15,10 @@ This directory contains Docker Compose configurations and shell scripts for sett
 ├──  📂 mongodb
 │   ├──  📄 docker-compose.yml
 │   ├──  📄 <a href="mongodb/README.md">README.md</a>
-│   ├──  📄 start-mongodb.js
 │   └──  📄 start-mongodb.sh
 └──  📄 <a href="README.md">README.md</a>
 
 
 📂 Total Folders: 1
-📄 Total Files: 5
+📄 Total Files: 4
 </pre>

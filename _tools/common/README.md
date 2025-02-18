@@ -12,6 +12,7 @@ bun run common:generate:fs . README.md
 bun run common:generate:fs ./_tools ./_tools/README.md
 bun run common:generate:fs ./_tools/common ./_tools/common/README.md
 bun run common:generate:fs ./_tools/databases ./_tools/databases/README.md
+bun run common:generate:fs ./_tools/databases/mongodb ./_tools/databases/mongodb/README.md
 bun run common:generate:fs ./_tools/guis ./_tools/guis/README.md
 bun run common:generate:fs ./_tools/guis/desktop ./_tools/guis/desktop/README.md
 bun run common:generate:fs ./_tools/guis/mobile ./_tools/guis/mobile/README.md

@@ -2,3 +2,27 @@
 
 This directory contains the scripts and the configuration file for instantiating a docker container hosting a mongodb community server
 
+[MongoDB CE](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/)
+
+**Path:** `./tools/databases/mongodb`
+
+## Usage
+
+```bash
+./start-mongodb.sh
+```
+
+## Tools for mongodb
+
+[Compass](https://www.mongodb.com/try/download/compass)
+
+### Directory Structure
+<pre style="background-color: white; padding: 10px;">
+├──  📄 docker-compose.yml
+├──  📄 <a href="README.md">README.md</a>
+└──  📄 start-mongodb.sh
+
+
+📂 Total Folders: 0
+📄 Total Files: 3
+</pre>
