@@ -68,14 +68,14 @@ The database instances are common for all applications.
 - [Clerk](https://clerk.com) (for managing authentication)
 - [Cloudinary](https://cloudinary.com) (for image cdn)
 
-## The applications
+## The applications ideas
 
-- [Book a pro](./DOCS/book_a_pro/README.MD)
-- [School Management](./DOCS/school_mng/README.MD)
-- [Travel App](./apps/DOCS/README.MD)
-- [E-Commerce](./DOCS/e_commerce/README.MD)
-- [Food ordering](./apps/food_ordering/README.MD)
-- [House Rental Management](./DOCS/house_rental/README.MD)
+- Book a pro
+- School Management
+- Travel App
+- E-Commerce
+- Food ordering
+- House Rental Management
   
 
 ### Directory Structure
