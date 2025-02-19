@@ -51,6 +51,7 @@ For the backend it uses APIs, it covers a set of technologies / frameworks:
 - [ExpressJs](https://expressjs.com/)
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [API Platform](https://api-platform.com/)
+- [Python](https://www.python.org)
 
 ### Database
 
