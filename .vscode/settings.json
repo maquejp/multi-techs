@@ -1,17 +1,16 @@
 {
   "conventionalCommits.scopes": [
+    "GLOBAL",
+    "GUIS/WEB/ALL",
     "GUIS/WEB/REACTJS/VITE",
-    "DATABASE/MONGODB",
     "GUIS/WEB/ANGULAR",
     "GUIS/WEB/SVELTE/VITE",
     "GUIS/WEB/VUE/VITE",
     "GUIS/WEB/ASTRO",
-    "GUIS/WEB",
-    "GLOBAL",
+    "DATABASES/ALL",
     "DATABASES/MONGODB",
     "DATABASES/POSTGRESQL",
     "DATABASES/MARIADB",
-    "DATABASES/ALL",
     "DATABASES/ORACLE"
   ]
 }
