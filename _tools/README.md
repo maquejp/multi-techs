@@ -13,6 +13,7 @@ This directory contains various tools and templates for setting up different typ
   - `mobile/` - Mobile application templates (React Native, Flutter, etc.) [more](./guis/mobile/README.md)
   - `web/` - Web application templates (React, Vue, Angular, etc.) [more](./guis/web/README.md)
 
+
 ### Directory Structure
 <pre style="background-color: white; padding: 10px;">
 ├──  📂 common
@@ -22,19 +23,19 @@ This directory contains various tools and templates for setting up different typ
 │   ├──  📂 mariadb
 │   │   ├──  📄 docker-compose.yml
 │   │   ├──  📄 <a href="databases/mariadb/README.md">README.md</a>
-│   │   └──  📄 start-mariadb.sh
+│   │   └──  📄 start-mariadb.js
 │   ├──  📂 mongodb
 │   │   ├──  📄 docker-compose.yml
 │   │   ├──  📄 <a href="databases/mongodb/README.md">README.md</a>
-│   │   └──  📄 start-mongodb.sh
+│   │   └──  📄 start-mongodb.js
 │   ├──  📂 oracleenterprise
 │   │   ├──  📄 docker-compose.yml
 │   │   ├──  📄 <a href="databases/oracleenterprise/README.md">README.md</a>
-│   │   └──  📄 start-oracleenterprise.sh
+│   │   └──  📄 start-oracleenterprise.js
 │   ├──  📂 postgresql
 │   │   ├──  📄 docker-compose.yml
 │   │   ├──  📄 <a href="databases/postgresql/README.md">README.md</a>
-│   │   └──  📄 start-postgresql.sh
+│   │   └──  📄 start-postgresql.js
 │   └──  📄 <a href="databases/README.md">README.md</a>
 ├──  📂 guis
 │   ├──  📂 desktop

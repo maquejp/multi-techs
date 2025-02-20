@@ -12,12 +12,12 @@ This directory contains the scripts and the configuration file for instantiating
 ./start-postgresql.sh
 ```
 
-### Directory Structure
 
+### Directory Structure
 <pre style="background-color: white; padding: 10px;">
 ├──  📄 docker-compose.yml
 ├──  📄 <a href="README.md">README.md</a>
-└──  📄 start-postgresql.sh
+└──  📄 start-postgresql.js
 
 
 📂 Total Folders: 0

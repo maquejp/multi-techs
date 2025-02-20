@@ -15,19 +15,19 @@ This directory contains Docker Compose configurations and shell scripts for sett
 ├──  📂 mariadb
 │   ├──  📄 docker-compose.yml
 │   ├──  📄 <a href="mariadb/README.md">README.md</a>
-│   └──  📄 start-mariadb.sh
+│   └──  📄 start-mariadb.js
 ├──  📂 mongodb
 │   ├──  📄 docker-compose.yml
 │   ├──  📄 <a href="mongodb/README.md">README.md</a>
-│   └──  📄 start-mongodb.sh
+│   └──  📄 start-mongodb.js
 ├──  📂 oracleenterprise
 │   ├──  📄 docker-compose.yml
 │   ├──  📄 <a href="oracleenterprise/README.md">README.md</a>
-│   └──  📄 start-oracleenterprise.sh
+│   └──  📄 start-oracleenterprise.js
 ├──  📂 postgresql
 │   ├──  📄 docker-compose.yml
 │   ├──  📄 <a href="postgresql/README.md">README.md</a>
-│   └──  📄 start-postgresql.sh
+│   └──  📄 start-postgresql.js
 └──  📄 <a href="README.md">README.md</a>
 
 

@@ -12,11 +12,12 @@ This directory contains the scripts and the configuration file for instantiating
 ./start-mariadb.sh
 ```
 
+
 ### Directory Structure
 <pre style="background-color: white; padding: 10px;">
 ├──  📄 docker-compose.yml
 ├──  📄 <a href="README.md">README.md</a>
-└──  📄 start-mariadb.sh
+└──  📄 start-mariadb.js
 
 
 📂 Total Folders: 0

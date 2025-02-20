@@ -89,19 +89,19 @@ The database instances are common for all applications.
 │   │   ├──  📂 mariadb
 │   │   │   ├──  📄 docker-compose.yml
 │   │   │   ├──  📄 <a href="_tools/databases/mariadb/README.md">README.md</a>
-│   │   │   └──  📄 start-mariadb.sh
+│   │   │   └──  📄 start-mariadb.js
 │   │   ├──  📂 mongodb
 │   │   │   ├──  📄 docker-compose.yml
 │   │   │   ├──  📄 <a href="_tools/databases/mongodb/README.md">README.md</a>
-│   │   │   └──  📄 start-mongodb.sh
+│   │   │   └──  📄 start-mongodb.js
 │   │   ├──  📂 oracleenterprise
 │   │   │   ├──  📄 docker-compose.yml
 │   │   │   ├──  📄 <a href="_tools/databases/oracleenterprise/README.md">README.md</a>
-│   │   │   └──  📄 start-oracleenterprise.sh
+│   │   │   └──  📄 start-oracleenterprise.js
 │   │   ├──  📂 postgresql
 │   │   │   ├──  📄 docker-compose.yml
 │   │   │   ├──  📄 <a href="_tools/databases/postgresql/README.md">README.md</a>
-│   │   │   └──  📄 start-postgresql.sh
+│   │   │   └──  📄 start-postgresql.js
 │   │   └──  📄 <a href="_tools/databases/README.md">README.md</a>
 │   ├──  📂 guis
 │   │   ├──  📂 desktop
