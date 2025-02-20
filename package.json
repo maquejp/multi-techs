@@ -9,7 +9,8 @@
     "setup:guis:web:astro": "bun run ./_tools/guis/web/astro/setup-project.js",
     "setup:guis:web:reactjs": "bun run ./_tools/guis/web/reactjs/setup-project.js",
     "setup:guis:web:svelte": "bun run ./_tools/guis/web/svelte/setup-project.js",
-    "setup:guis:web:vuejs": "bun run ./_tools/guis/web/vuejs/setup-project.js"
+    "setup:guis:web:vuejs": "bun run ./_tools/guis/web/vuejs/setup-project.js",
+    "setup:database:start:mariadb": "bun run ./_tools/databases/mariadb/start-mariadb.js"
   },
   "keywords": [],
   "author": "",
