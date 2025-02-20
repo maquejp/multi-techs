@@ -80,6 +80,6 @@ const treeStructure = buildTree(FOLDER_PATH);
 const summary = `\n📂 Total Folders: ${folderCount}\n📄 Total Files: ${fileCount}\n`;
 
 // Append the tree structure and summary inside a div with a white background
-fs.appendFileSync(README_FULL_PATH, `\n### Directory Structure\n<pre style="background-color: white; padding: 10px;">\n${treeStructure}\n${summary}</pre>\n`);
+fs.appendFileSync(README_FULL_PATH, `\n## Directory Structure\n<pre style="background-color: white; padding: 10px;">\n${treeStructure}\n${summary}</pre>\n`);
 
 console.log("Folder structure with links, icons, summary, and white background has been appended to the README file.");
