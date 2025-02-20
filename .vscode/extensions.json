@@ -1,13 +1,14 @@
 {
-    "recommendations": [
-        "svelte.svelte-vscode",
-        "oven.bun-vscode",
-        "vivaxy.vscode-conventional-commits",
-        "dbaeumer.vscode-eslint",
-        "dsznajder.es7-react-js-snippets",
-        "esbenp.prettier-vscode",
-        "bradlc.vscode-tailwindcss",
-        "vue.volar",
-        "astro-build.astro-vscode"
-    ]
+  "recommendations": [
+    "svelte.svelte-vscode",
+    "oven.bun-vscode",
+    "vivaxy.vscode-conventional-commits",
+    "dbaeumer.vscode-eslint",
+    "dsznajder.es7-react-js-snippets",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "vue.volar",
+    "astro-build.astro-vscode",
+    "mongodb.mongodb-vscode"
+  ]
 }

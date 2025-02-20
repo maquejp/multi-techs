@@ -12,6 +12,12 @@ This directory contains the scripts and the configuration file for instantiating
 ./start-mongodb.sh
 ```
 
+## Connection String
+
+```
+mongodb://mongoadmin:a-nice-admin-password@localhost:27017/
+```
+
 ## Tools for mongodb
 
 [Compass](https://www.mongodb.com/try/download/compass)
