@@ -1,0 +1,83 @@
+import { execSync, spawn } from "child_process";
+import { existsSync, mkdirSync, writeFileSync } from "fs";
+import { dirname, resolve } from "path";
+import { fileURLToPath } from "url";
+
+// Get script directory
+const __filename = fileURLToPath(import.meta.url);
+const SCRIPT_DIR = dirname(__filename);
+console.log(`Script directory: ${SCRIPT_DIR}`);
+
+// Create required directories
+const dataDir = resolve("./databases/oracleenterprise/data");
+const readmeFile = resolve("./databases/oracleenterprise/README.md");
+
+if (!existsSync(dataDir)) {
+    mkdirSync(dataDir, { recursive: true });
+    console.log("Created directories: ./databases/oracleenterprise/data");
+
+    try {
+        // Set permissions (Linux/macOS only)
+        if (process.platform !== "win32") {
+            execSync(`chmod 777 -R ./databases`);
+            // execSync(`chmod 777 -R "${dataDir}"`);
+        } else {
+            console.log("Skipping chmod for Windows platform.");
+        }
+    } catch (error) {
+        console.warn("Could not set permissions on:", dataDir);
+    }
+
+    const readmeContent = `# oracleenterprise
+
+Connection details:
+  - Host: localhost
+  - Port: 3306
+  - Username: system
+
+Despite the service is running, the first time it will take longer for the oracle database to be ready. Please check docker's log for the container!
+`;
+    writeFileSync(readmeFile, readmeContent);
+    console.log("Created README.md with connection details.");
+}
+
+// Start oracleenterprise container
+console.log("Starting oracleenterprise container...");
+try {
+    execSync(`docker compose -f "${SCRIPT_DIR}/docker-compose.yml" up -d`, {
+        stdio: "inherit",
+    });
+} catch (error) {
+    console.error("Error starting oracleenterprise container:", error.message);
+    process.exit(1);
+}
+
+// Wait for the oracleenterprise container to be healthy
+console.log("Waiting for container to be healthy...");
+const checkContainerHealth = () => {
+    try {
+        const status = execSync(
+            "docker inspect --format='{{.State.Health.Status}}' multitech-oracleenterprise-server",
+            { encoding: "utf-8", stdio: "pipe" }
+        ).trim();
+
+        return status === "healthy";
+    } catch {
+        return false;
+    }
+};
+
+const waitForHealthy = async () => {
+    while (!checkContainerHealth()) {
+        console.log("Waiting for oracleenterprise to be ready...");
+        await new Promise((resolve) => setTimeout(resolve, 5000));
+    }
+    console.log("oracleenterprise is now running and healthy!");
+    console.log("Connection details:");
+    console.log("  - Host: localhost");
+    console.log("  - Port: 3306");
+    console.log("  - Username: system");
+    console.log("Despite the service is running, the first time it will take longer for the oracle database to be ready. Please check docker's log for the container!");
+};
+
+waitForHealthy();
