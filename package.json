@@ -12,7 +12,8 @@
     "setup:guis:web:vuejs": "bun run ./_tools/guis/web/vuejs/setup-project.js",
     "setup:database:start:mariadb": "bun run ./_tools/databases/mariadb/start-mariadb.js",
     "setup:database:start:mongodb": "bun run ./_tools/databases/mongodb/start-mongodb.js",
-    "setup:database:start:oracleenterprise": "bun run ./_tools/databases/oracleenterprise/start-oracleenterprise.js"
+    "setup:database:start:oracleenterprise": "bun run ./_tools/databases/oracleenterprise/start-oracleenterprise.js",
+    "setup:database:start:postgresql": "bun run ./_tools/databases/postgresql/start-postgresql.js"
   },
   "keywords": [],
   "author": "",
