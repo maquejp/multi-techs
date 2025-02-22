@@ -13,7 +13,8 @@
     "DATABASES/MARIADB",
     "DATABASES/ORACLE",
     "BACKENDS/ALL",
-    "BACKENDS/EXPRESSJS"
+    "BACKENDS/EXPRESSJS",
+    "BACKENDS/SPRINGBOOT"
   ],
   "java.compile.nullAnalysis.mode": "automatic"
 }
