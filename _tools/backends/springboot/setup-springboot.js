@@ -21,6 +21,10 @@ const PROJECT_NAME = process.argv[2];
 const PROJECT_PATH = path.join(BACKENDS_BASE_PATH, PROJECT_NAME);
 console.log("PROJECT_PATH: ", PROJECT_PATH);
 
+// Format the project name for display
+const FORMATTED_PROJECT_NAME = PROJECT_NAME.replace(/[_-]/g, " ") // Replace _ and - with spaces
+  .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalize each word
+
 if (fs.existsSync(PROJECT_PATH)) {
   console.error(
     `Error: The project \"${PROJECT_NAME}\" already exists at ${PROJECT_PATH}`
@@ -31,7 +35,10 @@ if (fs.existsSync(PROJECT_PATH)) {
 console.log(`Creating project directory at ${PROJECT_PATH}...`);
 fs.mkdirSync(PROJECT_PATH, { recursive: true });
 
-const SPRING_BOOT_URL = `https://start.spring.io/starter.tgz?type=maven-project&language=java&javaVersion=21&bootVersion=3.4.3&packaging=jar&groupId=net.maquestiaux&artifactId=${PROJECT_NAME}&name=${PROJECT_NAME}&packageName=net.maquestiaux.${PROJECT_NAME}&dependencies=web,devtools`;
+// Replace hyphens with underscores in the package name
+const packageName = `net.maquestiaux.${PROJECT_NAME.replace(/-/g, "_")}`;
+
+const SPRING_BOOT_URL = `https://start.spring.io/starter.tgz?type=maven-project&language=java&javaVersion=21&bootVersion=3.4.3&packaging=jar&groupId=net.maquestiaux&artifactId=${PROJECT_NAME}&name=${PROJECT_NAME}&packageName=${packageName}&dependencies=web,devtools`;
 
 console.log("Downloading Spring Boot project...");
 https
@@ -84,6 +91,44 @@ https
           console.error(`Spring Boot application exited with code ${code}`);
         }
       });
+
+      // Define the directory for the controller
+      const controllerDirectory = path.join(
+        PROJECT_PATH,
+        `src/main/java/net/maquestiaux/${PROJECT_NAME.replace(/-/g, "_")}`
+      );
+      const controllerFilePath = path.join(
+        controllerDirectory,
+        "HelloController.java"
+      );
+
+      // Create directories if they don't exist
+      fs.mkdirSync(controllerDirectory, { recursive: true });
+
+      // Java class code with dynamic package name
+      const helloControllerCode = `
+package ${packageName};
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@RestController
+public class HelloController {
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello ${FORMATTED_PROJECT_NAME}";
+    }
+
+}
+`;
+
+      // Write the HelloController.java file
+      fs.writeFileSync(controllerFilePath, helloControllerCode.trim(), "utf8");
+
+      console.log(
+        "HelloController.java added to the project with dynamic package name."
+      );
     });
   })
   .on("error", (err) => {
