@@ -14,5 +14,6 @@
     "DATABASES/ORACLE",
     "BACKENDS/ALL",
     "BACKENDS/EXPRESSJS"
-  ]
+  ],
+  "java.compile.nullAnalysis.mode": "automatic"
 }

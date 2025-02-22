@@ -9,6 +9,7 @@
     "bradlc.vscode-tailwindcss",
     "vue.volar",
     "astro-build.astro-vscode",
-    "mongodb.mongodb-vscode"
+    "mongodb.mongodb-vscode",
+    "vscjava.vscode-java-pack"
   ]
 }
