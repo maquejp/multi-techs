@@ -14,7 +14,8 @@
     "DATABASES/ORACLE",
     "BACKENDS/ALL",
     "BACKENDS/EXPRESSJS",
-    "BACKENDS/SPRINGBOOT"
+    "BACKENDS/SPRINGBOOT",
+    "BACKENDS/APIPLATFORM"
   ],
   "java.compile.nullAnalysis.mode": "automatic"
 }

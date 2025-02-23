@@ -1,0 +1,11 @@
+services:
+  php:
+    build: .
+    container_name: symfony-php
+    working_dir: /var/www
+    volumes:
+      - .:/var/www
+    environment:
+      - DATABASE_URL=mysql://user:password@multitech-mariadb-server:3306/database_name?serverVersion=mariadb-10.6
+    ports:
+      - "80:80"  # Expose Nginx to host

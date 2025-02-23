@@ -15,7 +15,8 @@
     "setup:database:start:oracleenterprise": "bun run ./_tools/databases/oracleenterprise/start-oracleenterprise.js",
     "setup:database:start:postgresql": "bun run ./_tools/databases/postgresql/start-postgresql.js",
     "setup:backends:expressjs": "bun run ./_tools/backends/expressjs/setup-expressjs.js",
-    "setup:backends:springboot": "bun run ./_tools/backends/springboot/setup-springboot.js"
+    "setup:backends:springboot": "bun run ./_tools/backends/springboot/setup-springboot.js",
+    "setup:backends:apiplatform": "bun run ./_tools/backends/apiplatform/setup-apiplatform.js"
   },
   "keywords": [],
   "author": "",
