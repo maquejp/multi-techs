@@ -96,7 +96,7 @@ try {
   process.exit(1);
 }
 
-// Wait for the MariaDB container to be healthy
+// Wait for the api platform container to be healthy
 console.log("Waiting for container to be healthy...");
 const checkContainerHealth = () => {
   try {
@@ -113,10 +113,10 @@ const checkContainerHealth = () => {
 
 const waitForHealthy = async () => {
   while (!checkContainerHealth()) {
-    console.log("Waiting for mariadb to be ready...");
+    console.log("Waiting for api platform to be ready...");
     await new Promise((resolve) => setTimeout(resolve, 5000));
   }
-  console.log("mariadb is now running and healthy!");
+  console.log("api platform is now running and healthy!");
   console.log("Connection details:");
   console.log("  - Host: localhost");
   console.log("  - Port: 8086");

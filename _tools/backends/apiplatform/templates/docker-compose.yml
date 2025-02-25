@@ -14,7 +14,7 @@ services:
     command: /bin/bash /setup.sh # Execute the script as the container command
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:80"] # Adjust the URL if necessary
+      test: ["CMD", "curl", "http://localhost:80"] # Adjust the URL if necessary
       interval: 30s # Check every 30 seconds
       retries: 3 # Retry 3 times before marking the container as unhealthy
       start_period: 10s # Delay before starting health check
