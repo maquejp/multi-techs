@@ -2,6 +2,8 @@ services:
   multitech-oracleenterprise-server:
     image: container-registry.oracle.com/database/enterprise:21.3.0.0
     container_name: multitech-oracleenterprise-server
+    networks:
+      - multitech-common-network
     environment:
       - ORACLE_PWD=A-nice-admin-password-1234!
       - ORACLE_SID=ORCLCDB
@@ -24,3 +26,7 @@ services:
       timeout: 5s
       retries: 3
       start_period: 20s
+
+networks:
+  multitech-common-network:
+    external: true
