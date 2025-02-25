@@ -42,6 +42,16 @@ Connection details:
 // Start postgresql container
 console.log("Starting postgresql container...");
 try {
+
+    // Create the multitech-common network if needed
+    try {
+        execSync(`docker network create --driver bridge --subnet 172.40.0.0/16 multitech-common-network`, {
+            stdio: "inherit",
+        });
+    } catch (error) {
+        console.error("Error creating common network:", error.message);
+    }
+
     execSync(`docker compose -f "${SCRIPT_DIR}/docker-compose.yml" up -d`, {
         stdio: "inherit",
     });
