@@ -2,6 +2,8 @@ services:
   multitech-mariadb-server:
     image: mariadb:latest
     container_name: multitech-mariadb-server
+    networks:
+      - multitech-common-network
     environment:
       - MARIADB_ROOT_PASSWORD=a-nice-admin-password
       - MARIADB_USER=mariadbadmin
@@ -18,3 +20,7 @@ services:
       interval: 10s
       timeout: 5s
       retries: 3
+
+networks:
+  multitech-common-network:
+    external: true
