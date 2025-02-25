@@ -84,9 +84,12 @@ try {
     console.error("Error creating common network:", error.message);
   }
 
-  execSync(`docker build --no-cache -t multitech-apiplatform .`, {
-    stdio: "inherit",
-  });
+  const imageExists = execSync('docker images -q multitech-apiplatform').toString().trim();
+  if (!imageExists) {
+    execSync(`docker build --no-cache -t multitech-apiplatform .`, {
+      stdio: "inherit",
+    });
+  }
 
   execSync(`docker compose up --build -d`, {
     stdio: "inherit",

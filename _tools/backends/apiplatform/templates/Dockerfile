@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
     zip \
     nginx \
     supervisor \
-    && docker-php-ext-install intl pdo pdo_mysql zip \
+    && docker-php-ext-install intl pdo pdo_mysql zip opcache \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install Composer globally
@@ -34,6 +34,14 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Expose ports (Nginx on 80, PHP-FPM on 9000)
 EXPOSE 80 9000
+
+# Enable opcache settings
+RUN echo "opcache.enable=1" >> /usr/local/etc/php/conf.d/docker-php-opcache.ini && \
+    echo "opcache.memory_consumption=128" >> /usr/local/etc/php/conf.d/docker-php-opcache.ini && \
+    echo "opcache.interned_strings_buffer=8" >> /usr/local/etc/php/conf.d/docker-php-opcache.ini && \
+    echo "opcache.max_accelerated_files=4000" >> /usr/local/etc/php/conf.d/docker-php-opcache.ini && \
+    echo "opcache.validate_timestamps=1" >> /usr/local/etc/php/conf.d/docker-php-opcache.ini && \
+    echo "opcache.save_comments=1" >> /usr/local/etc/php/conf.d/docker-php-opcache.ini
 
 # Start Supervisord to manage processes
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
