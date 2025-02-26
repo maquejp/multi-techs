@@ -18,6 +18,18 @@ console.log("README_FILE_PATH: ", README_FILE_PATH);
 console.log(`Creating project directory at ${DATABASES_DATA_PATH}...`);
 fs.mkdirSync(DATABASES_DATA_PATH, { recursive: true });
 
+try {
+    // Set permissions (Linux/macOS only)
+    if (process.platform !== "win32") {
+        execSync(`chmod 777 -R ./databases`);
+        // execSync(`chmod 777 -R "${DATABASES_BASE_PATH}"`);
+    } else {
+        console.log("Skipping chmod for Windows platform.");
+    }
+} catch (error) {
+    console.warn("Could not set permissions on:", DATABASES_BASE_PATH);
+}
+
 // Copy the docker compose file
 console.log("Copying docker-compose.yml...");
 fs.copyFileSync(
