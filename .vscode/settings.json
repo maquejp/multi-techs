@@ -15,7 +15,8 @@
     "BACKENDS/ALL",
     "BACKENDS/EXPRESSJS",
     "BACKENDS/SPRINGBOOT",
-    "BACKENDS/APIPLATFORM"
+    "BACKENDS/APIPLATFORM",
+    "DOCUMENTATION/ALL"
   ],
   "java.compile.nullAnalysis.mode": "automatic"
 }
