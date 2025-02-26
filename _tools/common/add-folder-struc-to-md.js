@@ -44,9 +44,10 @@ function buildTree(dirPath, depth = 0) {
         }
     });
 
-    const sortedItems = [...directories, ...regularFiles].sort((a, b) =>
-        a.toLowerCase().localeCompare(b.toLowerCase())
-    );
+    directories.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+    regularFiles.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+
+    const sortedItems = [...directories, ...regularFiles];
 
     sortedItems.forEach((item, index) => {
         const isLastItem = index === sortedItems.length - 1;
