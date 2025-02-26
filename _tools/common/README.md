@@ -34,6 +34,10 @@ bun run common:generate:fs ./_tools/backends/expressjs ./_tools/backends/express
 bun run common:generate:fs ./_tools/backends/springboot ./_tools/backends/springboot/README.md
 ```
 
+```bash
+bun run common:generate:fs ./_projects ./_projects/README.md
+```
+
 WARNING ON BELOW COMMANDS: **Only if one project has been created as it is also to have the generate project structure**
 
 ```bash

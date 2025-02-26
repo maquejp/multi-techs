@@ -86,56 +86,79 @@ The database instances are common for all applications.
 
 ## Directory Structure
 <pre style="background-color: white; padding: 10px;">
+├──  📂 _projects
+│   ├──  📂 car
+│   │   └──  📄 <a href="_projects/car/README.md">README.md</a>
+│   ├──  📂 commerce
+│   │   └──  📄 <a href="_projects/commerce/README.md">README.md</a>
+│   ├──  📂 doctor
+│   │   └──  📄 <a href="_projects/doctor/README.md">README.md</a>
+│   ├──  📂 echo
+│   │   └──  📄 <a href="_projects/echo/README.md">README.md</a>
+│   ├──  📂 food
+│   │   └──  📄 <a href="_projects/food/README.md">README.md</a>
+│   ├──  📂 house
+│   │   └──  📄 <a href="_projects/house/README.md">README.md</a>
+│   ├──  📂 movie
+│   │   └──  📄 <a href="_projects/movie/README.md">README.md</a>
+│   ├──  📂 patient
+│   │   └──  📄 <a href="_projects/patient/README.md">README.md</a>
+│   ├──  📂 recipe
+│   │   └──  📄 <a href="_projects/recipe/README.md">README.md</a>
+│   ├──  📂 resto
+│   │   └──  📄 <a href="_projects/resto/README.md">README.md</a>
+│   ├──  📂 travel
+│   │   └──  📄 <a href="_projects/travel/README.md">README.md</a>
+│   └──  📄 <a href="_projects/README.md">README.md</a>
 ├──  📂 _tools
 │   ├──  📂 backends
 │   │   ├──  📂 apiplatform
-│   │   │   ├──  📄 <a href="_tools/backends/apiplatform/README.md">README.md</a>
-│   │   │   ├──  📄 setup-apiplatform.js
-│   │   │   └──  📂 templates
+│   │   │   ├──  📂 templates
 │   │   │   │   ├──  📄 default.conf
 │   │   │   │   ├──  📄 docker-compose.yml
 │   │   │   │   ├──  📄 Dockerfile
 │   │   │   │   ├──  📄 setup.sh
 │   │   │   │   └──  📄 supervisord.conf
+│   │   │   ├──  📄 <a href="_tools/backends/apiplatform/README.md">README.md</a>
+│   │   │   └──  📄 setup-apiplatform.js
 │   │   ├──  📂 expressjs
 │   │   │   ├──  📄 <a href="_tools/backends/expressjs/README.md">README.md</a>
 │   │   │   └──  📄 setup-expressjs.js
-│   │   ├──  📄 <a href="_tools/backends/README.md">README.md</a>
-│   │   └──  📂 springboot
+│   │   ├──  📂 springboot
 │   │   │   ├──  📄 <a href="_tools/backends/springboot/README.md">README.md</a>
 │   │   │   └──  📄 setup-springboot.js
+│   │   └──  📄 <a href="_tools/backends/README.md">README.md</a>
 │   ├──  📂 common
 │   │   ├──  📄 add-folder-struc-to-md.js
 │   │   └──  📄 <a href="_tools/common/README.md">README.md</a>
 │   ├──  📂 databases
 │   │   ├──  📂 mariadb
+│   │   │   ├──  📂 templates
+│   │   │   │   └──  📄 docker-compose.yml
 │   │   │   ├──  📄 <a href="_tools/databases/mariadb/README.md">README.md</a>
-│   │   │   ├──  📄 start-mariadb.js
-│   │   │   └──  📂 templates
-│   │   │   │   └──  📄 docker-compose.yml
+│   │   │   └──  📄 start-mariadb.js
 │   │   ├──  📂 mongodb
+│   │   │   ├──  📂 templates
+│   │   │   │   └──  📄 docker-compose.yml
 │   │   │   ├──  📄 <a href="_tools/databases/mongodb/README.md">README.md</a>
-│   │   │   ├──  📄 start-mongodb.js
-│   │   │   └──  📂 templates
-│   │   │   │   └──  📄 docker-compose.yml
+│   │   │   └──  📄 start-mongodb.js
 │   │   ├──  📂 oracleenterprise
+│   │   │   ├──  📂 templates
+│   │   │   │   └──  📄 docker-compose.yml
 │   │   │   ├──  📄 <a href="_tools/databases/oracleenterprise/README.md">README.md</a>
-│   │   │   ├──  📄 start-oracleenterprise.js
-│   │   │   └──  📂 templates
-│   │   │   │   └──  📄 docker-compose.yml
+│   │   │   └──  📄 start-oracleenterprise.js
 │   │   ├──  📂 postgresql
-│   │   │   ├──  📄 <a href="_tools/databases/postgresql/README.md">README.md</a>
-│   │   │   ├──  📄 start-postgresql.js
-│   │   │   └──  📂 templates
+│   │   │   ├──  📂 templates
 │   │   │   │   └──  📄 docker-compose.yml
+│   │   │   ├──  📄 <a href="_tools/databases/postgresql/README.md">README.md</a>
+│   │   │   └──  📄 start-postgresql.js
 │   │   └──  📄 <a href="_tools/databases/README.md">README.md</a>
 │   ├──  📂 guis
 │   │   ├──  📂 desktop
 │   │   │   └──  📄 <a href="_tools/guis/desktop/README.md">README.md</a>
 │   │   ├──  📂 mobile
 │   │   │   └──  📄 <a href="_tools/guis/mobile/README.md">README.md</a>
-│   │   ├──  📄 <a href="_tools/guis/README.md">README.md</a>
-│   │   └──  📂 web
+│   │   ├──  📂 web
 │   │   │   ├──  📂 angular
 │   │   │   │   ├──  📄 <a href="_tools/guis/web/angular/README.md">README.md</a>
 │   │   │   │   └──  📄 setup-project.js
@@ -145,18 +168,19 @@ The database instances are common for all applications.
 │   │   │   ├──  📂 reactjs
 │   │   │   │   ├──  📄 <a href="_tools/guis/web/reactjs/README.md">README.md</a>
 │   │   │   │   └──  📄 setup-project.js
-│   │   │   ├──  📄 <a href="_tools/guis/web/README.md">README.md</a>
 │   │   │   ├──  📂 svelte
 │   │   │   │   ├──  📄 <a href="_tools/guis/web/svelte/README.md">README.md</a>
 │   │   │   │   └──  📄 setup-project.js
-│   │   │   └──  📂 vuejs
+│   │   │   ├──  📂 vuejs
 │   │   │   │   ├──  📄 <a href="_tools/guis/web/vuejs/README.md">README.md</a>
 │   │   │   │   └──  📄 setup-project.js
+│   │   │   └──  📄 <a href="_tools/guis/web/README.md">README.md</a>
+│   │   └──  📄 <a href="_tools/guis/README.md">README.md</a>
 │   └──  📄 <a href="_tools/README.md">README.md</a>
-├──  📄 .gitignore
 ├──  📂 .vscode
 │   ├──  📄 extensions.json
 │   └──  📄 settings.json
+├──  📄 .gitignore
 ├──  📄 <a href="CODE_OF_CONDUCT.md">CODE_OF_CONDUCT.md</a>
 ├──  📄 <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>
 ├──  📄 <a href="LICENSE.md">LICENSE.md</a>
@@ -164,6 +188,6 @@ The database instances are common for all applications.
 └──  📄 <a href="README.md">README.md</a>
 
 
-📂 Total Folders: 26
-📄 Total Files: 50
+📂 Total Folders: 38
+📄 Total Files: 62
 </pre>

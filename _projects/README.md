@@ -17,3 +17,35 @@ This directory contains the description of the different projects that are creat
 - [Echo](./echo/README.md)
 - [Resto POS](./resto/README.md)
 - [House Rental](./house/README.md)
+
+
+## Directory Structure
+<pre style="background-color: white; padding: 10px;">
+├──  📂 car
+│   └──  📄 <a href="car/README.md">README.md</a>
+├──  📂 commerce
+│   └──  📄 <a href="commerce/README.md">README.md</a>
+├──  📂 doctor
+│   └──  📄 <a href="doctor/README.md">README.md</a>
+├──  📂 echo
+│   └──  📄 <a href="echo/README.md">README.md</a>
+├──  📂 food
+│   └──  📄 <a href="food/README.md">README.md</a>
+├──  📂 house
+│   └──  📄 <a href="house/README.md">README.md</a>
+├──  📂 movie
+│   └──  📄 <a href="movie/README.md">README.md</a>
+├──  📂 patient
+│   └──  📄 <a href="patient/README.md">README.md</a>
+├──  📂 recipe
+│   └──  📄 <a href="recipe/README.md">README.md</a>
+├──  📂 resto
+│   └──  📄 <a href="resto/README.md">README.md</a>
+├──  📂 travel
+│   └──  📄 <a href="travel/README.md">README.md</a>
+└──  📄 <a href="README.md">README.md</a>
+
+
+📂 Total Folders: 11
+📄 Total Files: 12
+</pre>
