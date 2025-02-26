@@ -10,8 +10,8 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - ../../../databases/mongodb/data:/data/db
-      - ../../../databases/mongodb/config:/data/configdb
+      - ./data:/data/db
+      - ./config:/data/configdb
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
