@@ -26,7 +26,8 @@ This directory contains various tools and templates for setting up different typ
 │   └──  📄 <a href="backends/README.md">README.md</a>
 ├──  📂 common
 │   ├──  📄 add-folder-struc-to-md.js
-│   └──  📄 <a href="common/README.md">README.md</a>
+│   ├──  📄 <a href="common/README.md">README.md</a>
+│   └──  📄 update-folder-struc-all-md.js
 ├──  📂 databases
 │   ├──  📂 mariadb
 │   │   ├──  📂 templates
@@ -76,5 +77,5 @@ This directory contains various tools and templates for setting up different typ
 
 
 📂 Total Folders: 24
-📄 Total Files: 42
+📄 Total Files: 43
 </pre>

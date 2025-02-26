@@ -15,10 +15,10 @@ This directory contains the scripts and the configuration file for instantiating
 
 ## Directory Structure
 <pre style="background-color: white; padding: 10px;">
-├──  📄 <a href="README.md">README.md</a>
-├──  📄 start-postgresql.js
-└──  📂 templates
+├──  📂 templates
 │   └──  📄 docker-compose.yml
+├──  📄 <a href="README.md">README.md</a>
+└──  📄 start-postgresql.js
 
 
 📂 Total Folders: 1

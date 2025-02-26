@@ -25,10 +25,10 @@ mongodb://mongoadmin:a-nice-admin-password@localhost:27017/
 
 ## Directory Structure
 <pre style="background-color: white; padding: 10px;">
-├──  📄 <a href="README.md">README.md</a>
-├──  📄 start-mongodb.js
-└──  📂 templates
+├──  📂 templates
 │   └──  📄 docker-compose.yml
+├──  📄 <a href="README.md">README.md</a>
+└──  📄 start-mongodb.js
 
 
 📂 Total Folders: 1

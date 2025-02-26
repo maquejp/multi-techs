@@ -13,25 +13,25 @@ This directory contains Docker Compose configurations and shell scripts for sett
 ## Directory Structure
 <pre style="background-color: white; padding: 10px;">
 ├──  📂 mariadb
+│   ├──  📂 templates
+│   │   └──  📄 docker-compose.yml
 │   ├──  📄 <a href="mariadb/README.md">README.md</a>
-│   ├──  📄 start-mariadb.js
-│   └──  📂 templates
-│   │   └──  📄 docker-compose.yml
+│   └──  📄 start-mariadb.js
 ├──  📂 mongodb
+│   ├──  📂 templates
+│   │   └──  📄 docker-compose.yml
 │   ├──  📄 <a href="mongodb/README.md">README.md</a>
-│   ├──  📄 start-mongodb.js
-│   └──  📂 templates
-│   │   └──  📄 docker-compose.yml
+│   └──  📄 start-mongodb.js
 ├──  📂 oracleenterprise
+│   ├──  📂 templates
+│   │   └──  📄 docker-compose.yml
 │   ├──  📄 <a href="oracleenterprise/README.md">README.md</a>
-│   ├──  📄 start-oracleenterprise.js
-│   └──  📂 templates
-│   │   └──  📄 docker-compose.yml
+│   └──  📄 start-oracleenterprise.js
 ├──  📂 postgresql
-│   ├──  📄 <a href="postgresql/README.md">README.md</a>
-│   ├──  📄 start-postgresql.js
-│   └──  📂 templates
+│   ├──  📂 templates
 │   │   └──  📄 docker-compose.yml
+│   ├──  📄 <a href="postgresql/README.md">README.md</a>
+│   └──  📄 start-postgresql.js
 └──  📄 <a href="README.md">README.md</a>
 
 

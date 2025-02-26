@@ -130,7 +130,8 @@ The database instances are common for all applications.
 │   │   └──  📄 <a href="_tools/backends/README.md">README.md</a>
 │   ├──  📂 common
 │   │   ├──  📄 add-folder-struc-to-md.js
-│   │   └──  📄 <a href="_tools/common/README.md">README.md</a>
+│   │   ├──  📄 <a href="_tools/common/README.md">README.md</a>
+│   │   └──  📄 update-folder-struc-all-md.js
 │   ├──  📂 databases
 │   │   ├──  📂 mariadb
 │   │   │   ├──  📂 templates
@@ -189,5 +190,5 @@ The database instances are common for all applications.
 
 
 📂 Total Folders: 38
-📄 Total Files: 62
+📄 Total Files: 63
 </pre>

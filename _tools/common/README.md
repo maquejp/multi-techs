@@ -7,6 +7,12 @@ This directory contains various tools to support the development.
 ## Usage
 
 ```bash
+bun run common:generate:fs:all
+```
+
+OR each manually
+
+```bash
 bun run common:generate:fs . README.md
 bun run common:generate:fs ./_tools ./_tools/README.md
 bun run common:generate:fs ./_tools/common ./_tools/common/README.md
@@ -52,9 +58,10 @@ bun run common:generate:fs ./guis/web/vuejs ./_tools/guis/web/vuejs/README.md
 ## Directory Structure
 <pre style="background-color: white; padding: 10px;">
 ├──  📄 add-folder-struc-to-md.js
-└──  📄 <a href="README.md">README.md</a>
+├──  📄 <a href="README.md">README.md</a>
+└──  📄 update-folder-struc-all-md.js
 
 
 📂 Total Folders: 0
-📄 Total Files: 2
+📄 Total Files: 3
 </pre>
