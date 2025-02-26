@@ -8,21 +8,21 @@ This directory contains templates and tools for different types of BACKENDS appl
 ## Directory Structure
 <pre style="background-color: white; padding: 10px;">
 ├──  📂 apiplatform
-│   ├──  📄 <a href="apiplatform/README.md">README.md</a>
-│   ├──  📄 setup-apiplatform.js
-│   └──  📂 templates
+│   ├──  📂 templates
 │   │   ├──  📄 default.conf
 │   │   ├──  📄 docker-compose.yml
 │   │   ├──  📄 Dockerfile
 │   │   ├──  📄 setup.sh
 │   │   └──  📄 supervisord.conf
+│   ├──  📄 <a href="apiplatform/README.md">README.md</a>
+│   └──  📄 setup-apiplatform.js
 ├──  📂 expressjs
 │   ├──  📄 <a href="expressjs/README.md">README.md</a>
 │   └──  📄 setup-expressjs.js
-├──  📄 <a href="README.md">README.md</a>
-└──  📂 springboot
+├──  📂 springboot
 │   ├──  📄 <a href="springboot/README.md">README.md</a>
 │   └──  📄 setup-springboot.js
+└──  📄 <a href="README.md">README.md</a>
 
 
 📂 Total Folders: 4

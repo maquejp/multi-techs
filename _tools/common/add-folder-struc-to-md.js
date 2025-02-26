@@ -44,6 +44,7 @@ function buildTree(dirPath, depth = 0) {
         }
     });
 
+    // Sort folders first, then files
     directories.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
     regularFiles.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
@@ -74,13 +75,21 @@ function buildTree(dirPath, depth = 0) {
     return treeOutput;
 }
 
+// Read existing README content
+let readmeContent = fs.existsSync(README_FULL_PATH) ? fs.readFileSync(README_FULL_PATH, 'utf-8') : "";
+
+// Remove existing "## Directory Structure" section if it exists
+const regex = /## Directory Structure[\s\S]*$/;
+readmeContent = readmeContent.replace(regex, '').trim();
+
 // Build the directory tree
 const treeStructure = buildTree(FOLDER_PATH);
 
 // Summary inside <pre> tag
 const summary = `\n📂 Total Folders: ${folderCount}\n📄 Total Files: ${fileCount}\n`;
 
-// Append the tree structure and summary inside a div with a white background
-fs.appendFileSync(README_FULL_PATH, `\n## Directory Structure\n<pre style="background-color: white; padding: 10px;">\n${treeStructure}\n${summary}</pre>\n`);
+// Append the new directory structure section
+const newSection = `\n## Directory Structure\n<pre style="background-color: white; padding: 10px;">\n${treeStructure}\n${summary}</pre>\n`;
+fs.writeFileSync(README_FULL_PATH, readmeContent + "\n\n" + newSection);
 
-console.log("Folder structure with links, icons, summary, and white background has been appended to the README file.");
+console.log("Updated directory structure in README.");

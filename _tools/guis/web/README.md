@@ -67,13 +67,13 @@ The setup scripts perform the following tasks:
 ├──  📂 reactjs
 │   ├──  📄 <a href="reactjs/README.md">README.md</a>
 │   └──  📄 setup-project.js
-├──  📄 <a href="README.md">README.md</a>
 ├──  📂 svelte
 │   ├──  📄 <a href="svelte/README.md">README.md</a>
 │   └──  📄 setup-project.js
-└──  📂 vuejs
+├──  📂 vuejs
 │   ├──  📄 <a href="vuejs/README.md">README.md</a>
 │   └──  📄 setup-project.js
+└──  📄 <a href="README.md">README.md</a>
 
 
 📂 Total Folders: 5

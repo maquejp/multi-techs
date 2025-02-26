@@ -40,8 +40,7 @@ Currently implemented frameworks:
 │   └──  📄 <a href="desktop/README.md">README.md</a>
 ├──  📂 mobile
 │   └──  📄 <a href="mobile/README.md">README.md</a>
-├──  📄 <a href="README.md">README.md</a>
-└──  📂 web
+├──  📂 web
 │   ├──  📂 angular
 │   │   ├──  📄 <a href="web/angular/README.md">README.md</a>
 │   │   └──  📄 setup-project.js
@@ -51,13 +50,14 @@ Currently implemented frameworks:
 │   ├──  📂 reactjs
 │   │   ├──  📄 <a href="web/reactjs/README.md">README.md</a>
 │   │   └──  📄 setup-project.js
-│   ├──  📄 <a href="web/README.md">README.md</a>
 │   ├──  📂 svelte
 │   │   ├──  📄 <a href="web/svelte/README.md">README.md</a>
 │   │   └──  📄 setup-project.js
-│   └──  📂 vuejs
+│   ├──  📂 vuejs
 │   │   ├──  📄 <a href="web/vuejs/README.md">README.md</a>
 │   │   └──  📄 setup-project.js
+│   └──  📄 <a href="web/README.md">README.md</a>
+└──  📄 <a href="README.md">README.md</a>
 
 
 📂 Total Folders: 8

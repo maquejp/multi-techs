@@ -9,14 +9,14 @@ https://api-platform.com/docs/symfony/#installing-the-framework
 
 ## Directory Structure
 <pre style="background-color: white; padding: 10px;">
-├──  📄 <a href="README.md">README.md</a>
-├──  📄 setup-apiplatform.js
-└──  📂 templates
+├──  📂 templates
 │   ├──  📄 default.conf
 │   ├──  📄 docker-compose.yml
 │   ├──  📄 Dockerfile
 │   ├──  📄 setup.sh
 │   └──  📄 supervisord.conf
+├──  📄 <a href="README.md">README.md</a>
+└──  📄 setup-apiplatform.js
 
 
 📂 Total Folders: 1

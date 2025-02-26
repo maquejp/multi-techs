@@ -4,67 +4,57 @@ This directory contains various tools and templates for setting up different typ
 
 **Path:** `./_tools`
 
-## Directory Structure
-
-- `databases/` - Contains Docker Compose files and scripts for setting up different database environments  [more](./guis/databases/README.md)
-  - `mongodb` - Contains Docker compose and script for setting up a mongodb (*community server*) instance  [more](./databases/mongodb/README.md)
-- `guis/` - Templates and tools for different types of GUI applications  [more](./guis/README.md):
-  - `desktop/` - Desktop application templates (Electron, Tauri, etc.)  [more](./guis/desktop/README.md)
-  - `mobile/` - Mobile application templates (React Native, Flutter, etc.) [more](./guis/mobile/README.md)
-  - `web/` - Web application templates (React, Vue, Angular, etc.) [more](./guis/web/README.md)
-
 
 ## Directory Structure
 <pre style="background-color: white; padding: 10px;">
 ├──  📂 backends
 │   ├──  📂 apiplatform
-│   │   ├──  📄 <a href="backends/apiplatform/README.md">README.md</a>
-│   │   ├──  📄 setup-apiplatform.js
-│   │   └──  📂 templates
+│   │   ├──  📂 templates
 │   │   │   ├──  📄 default.conf
 │   │   │   ├──  📄 docker-compose.yml
 │   │   │   ├──  📄 Dockerfile
 │   │   │   ├──  📄 setup.sh
 │   │   │   └──  📄 supervisord.conf
+│   │   ├──  📄 <a href="backends/apiplatform/README.md">README.md</a>
+│   │   └──  📄 setup-apiplatform.js
 │   ├──  📂 expressjs
 │   │   ├──  📄 <a href="backends/expressjs/README.md">README.md</a>
 │   │   └──  📄 setup-expressjs.js
-│   ├──  📄 <a href="backends/README.md">README.md</a>
-│   └──  📂 springboot
+│   ├──  📂 springboot
 │   │   ├──  📄 <a href="backends/springboot/README.md">README.md</a>
 │   │   └──  📄 setup-springboot.js
+│   └──  📄 <a href="backends/README.md">README.md</a>
 ├──  📂 common
 │   ├──  📄 add-folder-struc-to-md.js
 │   └──  📄 <a href="common/README.md">README.md</a>
 ├──  📂 databases
 │   ├──  📂 mariadb
+│   │   ├──  📂 templates
+│   │   │   └──  📄 docker-compose.yml
 │   │   ├──  📄 <a href="databases/mariadb/README.md">README.md</a>
-│   │   ├──  📄 start-mariadb.js
-│   │   └──  📂 templates
-│   │   │   └──  📄 docker-compose.yml
+│   │   └──  📄 start-mariadb.js
 │   ├──  📂 mongodb
+│   │   ├──  📂 templates
+│   │   │   └──  📄 docker-compose.yml
 │   │   ├──  📄 <a href="databases/mongodb/README.md">README.md</a>
-│   │   ├──  📄 start-mongodb.js
-│   │   └──  📂 templates
-│   │   │   └──  📄 docker-compose.yml
+│   │   └──  📄 start-mongodb.js
 │   ├──  📂 oracleenterprise
+│   │   ├──  📂 templates
+│   │   │   └──  📄 docker-compose.yml
 │   │   ├──  📄 <a href="databases/oracleenterprise/README.md">README.md</a>
-│   │   ├──  📄 start-oracleenterprise.js
-│   │   └──  📂 templates
-│   │   │   └──  📄 docker-compose.yml
+│   │   └──  📄 start-oracleenterprise.js
 │   ├──  📂 postgresql
-│   │   ├──  📄 <a href="databases/postgresql/README.md">README.md</a>
-│   │   ├──  📄 start-postgresql.js
-│   │   └──  📂 templates
+│   │   ├──  📂 templates
 │   │   │   └──  📄 docker-compose.yml
+│   │   ├──  📄 <a href="databases/postgresql/README.md">README.md</a>
+│   │   └──  📄 start-postgresql.js
 │   └──  📄 <a href="databases/README.md">README.md</a>
 ├──  📂 guis
 │   ├──  📂 desktop
 │   │   └──  📄 <a href="guis/desktop/README.md">README.md</a>
 │   ├──  📂 mobile
 │   │   └──  📄 <a href="guis/mobile/README.md">README.md</a>
-│   ├──  📄 <a href="guis/README.md">README.md</a>
-│   └──  📂 web
+│   ├──  📂 web
 │   │   ├──  📂 angular
 │   │   │   ├──  📄 <a href="guis/web/angular/README.md">README.md</a>
 │   │   │   └──  📄 setup-project.js
@@ -74,13 +64,14 @@ This directory contains various tools and templates for setting up different typ
 │   │   ├──  📂 reactjs
 │   │   │   ├──  📄 <a href="guis/web/reactjs/README.md">README.md</a>
 │   │   │   └──  📄 setup-project.js
-│   │   ├──  📄 <a href="guis/web/README.md">README.md</a>
 │   │   ├──  📂 svelte
 │   │   │   ├──  📄 <a href="guis/web/svelte/README.md">README.md</a>
 │   │   │   └──  📄 setup-project.js
-│   │   └──  📂 vuejs
+│   │   ├──  📂 vuejs
 │   │   │   ├──  📄 <a href="guis/web/vuejs/README.md">README.md</a>
 │   │   │   └──  📄 setup-project.js
+│   │   └──  📄 <a href="guis/web/README.md">README.md</a>
+│   └──  📄 <a href="guis/README.md">README.md</a>
 └──  📄 <a href="README.md">README.md</a>
 
 
