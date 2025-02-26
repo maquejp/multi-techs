@@ -34,7 +34,7 @@ Currently implemented frameworks:
 - Built-in best practices
 
 
-### Directory Structure
+## Directory Structure
 <pre style="background-color: white; padding: 10px;">
 ├──  📂 desktop
 │   └──  📄 <a href="desktop/README.md">README.md</a>

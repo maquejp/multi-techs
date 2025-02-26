@@ -10,27 +10,31 @@ This directory contains Docker Compose configurations and shell scripts for sett
 - Maintain database initialization and setup scripts
 
 
-### Directory Structure
+## Directory Structure
 <pre style="background-color: white; padding: 10px;">
 ├──  📂 mariadb
-│   ├──  📄 docker-compose.yml
 │   ├──  📄 <a href="mariadb/README.md">README.md</a>
-│   └──  📄 start-mariadb.js
+│   ├──  📄 start-mariadb.js
+│   └──  📂 templates
+│   │   └──  📄 docker-compose.yml
 ├──  📂 mongodb
-│   ├──  📄 docker-compose.yml
 │   ├──  📄 <a href="mongodb/README.md">README.md</a>
-│   └──  📄 start-mongodb.js
+│   ├──  📄 start-mongodb.js
+│   └──  📂 templates
+│   │   └──  📄 docker-compose.yml
 ├──  📂 oracleenterprise
-│   ├──  📄 docker-compose.yml
 │   ├──  📄 <a href="oracleenterprise/README.md">README.md</a>
-│   └──  📄 start-oracleenterprise.js
+│   ├──  📄 start-oracleenterprise.js
+│   └──  📂 templates
+│   │   └──  📄 docker-compose.yml
 ├──  📂 postgresql
-│   ├──  📄 docker-compose.yml
 │   ├──  📄 <a href="postgresql/README.md">README.md</a>
-│   └──  📄 start-postgresql.js
+│   ├──  📄 start-postgresql.js
+│   └──  📂 templates
+│   │   └──  📄 docker-compose.yml
 └──  📄 <a href="README.md">README.md</a>
 
 
-📂 Total Folders: 4
+📂 Total Folders: 8
 📄 Total Files: 13
 </pre>

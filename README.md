@@ -84,32 +84,45 @@ The database instances are common for all applications.
 ├──  📂 _tools
 │   ├──  📂 backends
 │   │   ├──  📂 apiplatform
-│   │   │   └──  📄 <a href="_tools/backends/apiplatform/README.md">README.md</a>
+│   │   │   ├──  📄 <a href="_tools/backends/apiplatform/README.md">README.md</a>
+│   │   │   ├──  📄 setup-apiplatform.js
+│   │   │   └──  📂 templates
+│   │   │   │   ├──  📄 default.conf
+│   │   │   │   ├──  📄 docker-compose.yml
+│   │   │   │   ├──  📄 Dockerfile
+│   │   │   │   ├──  📄 setup.sh
+│   │   │   │   └──  📄 supervisord.conf
 │   │   ├──  📂 expressjs
-│   │   │   └──  📄 <a href="_tools/backends/expressjs/README.md">README.md</a>
+│   │   │   ├──  📄 <a href="_tools/backends/expressjs/README.md">README.md</a>
+│   │   │   └──  📄 setup-expressjs.js
 │   │   ├──  📄 <a href="_tools/backends/README.md">README.md</a>
 │   │   └──  📂 springboot
-│   │   │   └──  📄 <a href="_tools/backends/springboot/README.md">README.md</a>
+│   │   │   ├──  📄 <a href="_tools/backends/springboot/README.md">README.md</a>
+│   │   │   └──  📄 setup-springboot.js
 │   ├──  📂 common
 │   │   ├──  📄 add-folder-struc-to-md.js
 │   │   └──  📄 <a href="_tools/common/README.md">README.md</a>
 │   ├──  📂 databases
 │   │   ├──  📂 mariadb
-│   │   │   ├──  📄 docker-compose.yml
 │   │   │   ├──  📄 <a href="_tools/databases/mariadb/README.md">README.md</a>
-│   │   │   └──  📄 start-mariadb.js
+│   │   │   ├──  📄 start-mariadb.js
+│   │   │   └──  📂 templates
+│   │   │   │   └──  📄 docker-compose.yml
 │   │   ├──  📂 mongodb
-│   │   │   ├──  📄 docker-compose.yml
 │   │   │   ├──  📄 <a href="_tools/databases/mongodb/README.md">README.md</a>
-│   │   │   └──  📄 start-mongodb.js
+│   │   │   ├──  📄 start-mongodb.js
+│   │   │   └──  📂 templates
+│   │   │   │   └──  📄 docker-compose.yml
 │   │   ├──  📂 oracleenterprise
-│   │   │   ├──  📄 docker-compose.yml
 │   │   │   ├──  📄 <a href="_tools/databases/oracleenterprise/README.md">README.md</a>
-│   │   │   └──  📄 start-oracleenterprise.js
+│   │   │   ├──  📄 start-oracleenterprise.js
+│   │   │   └──  📂 templates
+│   │   │   │   └──  📄 docker-compose.yml
 │   │   ├──  📂 postgresql
-│   │   │   ├──  📄 docker-compose.yml
 │   │   │   ├──  📄 <a href="_tools/databases/postgresql/README.md">README.md</a>
-│   │   │   └──  📄 start-postgresql.js
+│   │   │   ├──  📄 start-postgresql.js
+│   │   │   └──  📂 templates
+│   │   │   │   └──  📄 docker-compose.yml
 │   │   └──  📄 <a href="_tools/databases/README.md">README.md</a>
 │   ├──  📂 guis
 │   │   ├──  📂 desktop
@@ -146,6 +159,6 @@ The database instances are common for all applications.
 └──  📄 <a href="README.md">README.md</a>
 
 
-📂 Total Folders: 21
-📄 Total Files: 42
+📂 Total Folders: 26
+📄 Total Files: 50
 </pre>

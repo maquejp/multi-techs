@@ -13,13 +13,14 @@ The Oracle Container Registry for 21c Enterprise is [here](https://container-reg
 ```
 
 
-### Directory Structure
+## Directory Structure
 <pre style="background-color: white; padding: 10px;">
-├──  📄 docker-compose.yml
 ├──  📄 <a href="README.md">README.md</a>
-└──  📄 start-oracleenterprise.js
+├──  📄 start-oracleenterprise.js
+└──  📂 templates
+│   └──  📄 docker-compose.yml
 
 
-📂 Total Folders: 0
+📂 Total Folders: 1
 📄 Total Files: 3
 </pre>

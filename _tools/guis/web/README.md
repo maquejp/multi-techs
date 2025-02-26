@@ -56,7 +56,7 @@ The setup scripts perform the following tasks:
 3. Set up Tailwind CSS for styling
 
 
-### Directory Structure
+## Directory Structure
 <pre style="background-color: white; padding: 10px;">
 ├──  📂 angular
 │   ├──  📄 <a href="angular/README.md">README.md</a>

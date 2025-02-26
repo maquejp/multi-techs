@@ -23,13 +23,14 @@ mongodb://mongoadmin:a-nice-admin-password@localhost:27017/
 [Compass](https://www.mongodb.com/try/download/compass)
 
 
-### Directory Structure
+## Directory Structure
 <pre style="background-color: white; padding: 10px;">
-├──  📄 docker-compose.yml
 ├──  📄 <a href="README.md">README.md</a>
-└──  📄 start-mongodb.js
+├──  📄 start-mongodb.js
+└──  📂 templates
+│   └──  📄 docker-compose.yml
 
 
-📂 Total Folders: 0
+📂 Total Folders: 1
 📄 Total Files: 3
 </pre>

@@ -13,13 +13,14 @@ This directory contains the scripts and the configuration file for instantiating
 ```
 
 
-### Directory Structure
+## Directory Structure
 <pre style="background-color: white; padding: 10px;">
-├──  📄 docker-compose.yml
 ├──  📄 <a href="README.md">README.md</a>
-└──  📄 start-mariadb.js
+├──  📄 start-mariadb.js
+└──  📂 templates
+│   └──  📄 docker-compose.yml
 
 
-📂 Total Folders: 0
+📂 Total Folders: 1
 📄 Total Files: 3
 </pre>

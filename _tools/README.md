@@ -18,32 +18,45 @@ This directory contains various tools and templates for setting up different typ
 <pre style="background-color: white; padding: 10px;">
 ├──  📂 backends
 │   ├──  📂 apiplatform
-│   │   └──  📄 <a href="backends/apiplatform/README.md">README.md</a>
+│   │   ├──  📄 <a href="backends/apiplatform/README.md">README.md</a>
+│   │   ├──  📄 setup-apiplatform.js
+│   │   └──  📂 templates
+│   │   │   ├──  📄 default.conf
+│   │   │   ├──  📄 docker-compose.yml
+│   │   │   ├──  📄 Dockerfile
+│   │   │   ├──  📄 setup.sh
+│   │   │   └──  📄 supervisord.conf
 │   ├──  📂 expressjs
-│   │   └──  📄 <a href="backends/expressjs/README.md">README.md</a>
+│   │   ├──  📄 <a href="backends/expressjs/README.md">README.md</a>
+│   │   └──  📄 setup-expressjs.js
 │   ├──  📄 <a href="backends/README.md">README.md</a>
 │   └──  📂 springboot
-│   │   └──  📄 <a href="backends/springboot/README.md">README.md</a>
+│   │   ├──  📄 <a href="backends/springboot/README.md">README.md</a>
+│   │   └──  📄 setup-springboot.js
 ├──  📂 common
 │   ├──  📄 add-folder-struc-to-md.js
 │   └──  📄 <a href="common/README.md">README.md</a>
 ├──  📂 databases
 │   ├──  📂 mariadb
-│   │   ├──  📄 docker-compose.yml
 │   │   ├──  📄 <a href="databases/mariadb/README.md">README.md</a>
-│   │   └──  📄 start-mariadb.js
+│   │   ├──  📄 start-mariadb.js
+│   │   └──  📂 templates
+│   │   │   └──  📄 docker-compose.yml
 │   ├──  📂 mongodb
-│   │   ├──  📄 docker-compose.yml
 │   │   ├──  📄 <a href="databases/mongodb/README.md">README.md</a>
-│   │   └──  📄 start-mongodb.js
+│   │   ├──  📄 start-mongodb.js
+│   │   └──  📂 templates
+│   │   │   └──  📄 docker-compose.yml
 │   ├──  📂 oracleenterprise
-│   │   ├──  📄 docker-compose.yml
 │   │   ├──  📄 <a href="databases/oracleenterprise/README.md">README.md</a>
-│   │   └──  📄 start-oracleenterprise.js
+│   │   ├──  📄 start-oracleenterprise.js
+│   │   └──  📂 templates
+│   │   │   └──  📄 docker-compose.yml
 │   ├──  📂 postgresql
-│   │   ├──  📄 docker-compose.yml
 │   │   ├──  📄 <a href="databases/postgresql/README.md">README.md</a>
-│   │   └──  📄 start-postgresql.js
+│   │   ├──  📄 start-postgresql.js
+│   │   └──  📂 templates
+│   │   │   └──  📄 docker-compose.yml
 │   └──  📄 <a href="databases/README.md">README.md</a>
 ├──  📂 guis
 │   ├──  📂 desktop
@@ -71,6 +84,6 @@ This directory contains various tools and templates for setting up different typ
 └──  📄 <a href="README.md">README.md</a>
 
 
-📂 Total Folders: 19
-📄 Total Files: 34
+📂 Total Folders: 24
+📄 Total Files: 42
 </pre>
