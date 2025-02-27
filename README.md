@@ -71,18 +71,7 @@ The database instances are common for all applications.
 
 ## The applications ideas
 
-- [Travel](./_projects/travel/README.md)
-- [Food Ordering](./_projects/food/README.md)
-- [Doctor Appointment](./_projects/doctor/README.md)
-- [Patient Management](./_projects/patient/README.md)
-- [Movie](./_projects/movie/README.md)
-- [Recipe](./_projects/recipe/README.md)
-- [Car Dealer](./_projects/car/README.md)
-- [E-Commerce](./_projects/commerce/README.md)
-- [Echo](./_projects/echo/README.md)
-- [Resto POS](./_projects/resto/README.md)
-- [House Rental](./_projects/house/README.md)
-
+All project ideas can be found [here](./_projects/README.md)
 
 ## Directory Structure
 <pre style="background-color: white; padding: 10px;">
