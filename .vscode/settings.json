@@ -17,7 +17,8 @@
     "BACKENDS/SPRINGBOOT",
     "BACKENDS/APIPLATFORM",
     "DOCUMENTATION/ALL",
-    "DOCUMENTATION/MOVIE"
+    "DOCUMENTATION/MOVIE",
+    "GUIS/WEB/REACTJS/MOVIE"
   ],
   "java.compile.nullAnalysis.mode": "automatic"
 }
