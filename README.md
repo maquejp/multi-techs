@@ -101,6 +101,8 @@ The database instances are common for all applications.
 │   │   └──  📄 <a href="_projects/food/README.md">README.md</a>
 │   ├──  📂 house
 │   │   └──  📄 <a href="_projects/house/README.md">README.md</a>
+│   ├──  📂 inventory
+│   │   └──  📄 <a href="_projects/inventory/README.md">README.md</a>
 │   ├──  📂 movie
 │   │   └──  📄 <a href="_projects/movie/README.md">README.md</a>
 │   ├──  📂 patient
@@ -191,6 +193,6 @@ The database instances are common for all applications.
 └──  📄 <a href="README.md">README.md</a>
 
 
-📂 Total Folders: 39
-📄 Total Files: 64
+📂 Total Folders: 40
+📄 Total Files: 65
 </pre>

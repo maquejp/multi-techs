@@ -17,6 +17,7 @@ This directory contains the description of the different projects that are creat
 - [Echo](./echo/README.md)
 - [Resto POS](./resto/README.md)
 - [House Rental](./house/README.md)
+- [Inventory](./inventory/README.md)
 - [Contract and Time Sheet](./contract/README.md)
 
 
@@ -36,6 +37,8 @@ This directory contains the description of the different projects that are creat
 │   └──  📄 <a href="food/README.md">README.md</a>
 ├──  📂 house
 │   └──  📄 <a href="house/README.md">README.md</a>
+├──  📂 inventory
+│   └──  📄 <a href="inventory/README.md">README.md</a>
 ├──  📂 movie
 │   └──  📄 <a href="movie/README.md">README.md</a>
 ├──  📂 patient
@@ -49,6 +52,6 @@ This directory contains the description of the different projects that are creat
 └──  📄 <a href="README.md">README.md</a>
 
 
-📂 Total Folders: 12
-📄 Total Files: 13
+📂 Total Folders: 13
+📄 Total Files: 14
 </pre>
