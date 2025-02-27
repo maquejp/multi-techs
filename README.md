@@ -91,6 +91,8 @@ The database instances are common for all applications.
 │   │   └──  📄 <a href="_projects/car/README.md">README.md</a>
 │   ├──  📂 commerce
 │   │   └──  📄 <a href="_projects/commerce/README.md">README.md</a>
+│   ├──  📂 contract
+│   │   └──  📄 <a href="_projects/contract/README.md">README.md</a>
 │   ├──  📂 doctor
 │   │   └──  📄 <a href="_projects/doctor/README.md">README.md</a>
 │   ├──  📂 echo
@@ -189,6 +191,6 @@ The database instances are common for all applications.
 └──  📄 <a href="README.md">README.md</a>
 
 
-📂 Total Folders: 38
-📄 Total Files: 63
+📂 Total Folders: 39
+📄 Total Files: 64
 </pre>

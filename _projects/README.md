@@ -17,6 +17,7 @@ This directory contains the description of the different projects that are creat
 - [Echo](./echo/README.md)
 - [Resto POS](./resto/README.md)
 - [House Rental](./house/README.md)
+- [Contract and Time Sheet](./contract/README.md)
 
 
 ## Directory Structure
@@ -25,6 +26,8 @@ This directory contains the description of the different projects that are creat
 │   └──  📄 <a href="car/README.md">README.md</a>
 ├──  📂 commerce
 │   └──  📄 <a href="commerce/README.md">README.md</a>
+├──  📂 contract
+│   └──  📄 <a href="contract/README.md">README.md</a>
 ├──  📂 doctor
 │   └──  📄 <a href="doctor/README.md">README.md</a>
 ├──  📂 echo
@@ -46,6 +49,6 @@ This directory contains the description of the different projects that are creat
 └──  📄 <a href="README.md">README.md</a>
 
 
-📂 Total Folders: 11
-📄 Total Files: 12
+📂 Total Folders: 12
+📄 Total Files: 13
 </pre>
