@@ -16,6 +16,21 @@ The user will proposed popular movies and tv shows.
 
 The user will be able to filter the general list or his lists based on several criterias.
 
+## Packages used
+
+### Icons
+
+[Material UI](https://mui.com/material-ui/material-icons/)
+
+- @emotion/react
+- @emotion/styled
+- @mui/icons-materia
+- @mui/material
+
+### Services
+
+- [Axios](https://axios-http.com/docs/intro)
+
 ## External services
 
 ### The Movie DB API
