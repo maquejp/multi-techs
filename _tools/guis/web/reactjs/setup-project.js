@@ -63,23 +63,27 @@ process.chdir(PROJECT_PATH);
 console.log(`Installing dependencies in ${PROJECT_PATH}`);
 execSync("bun install", { stdio: "inherit" });
 
-// Adding Tailwind CSS
-console.log(`Adding Tailwind CSS for ${PROJECT_NAME}`);
-execSync("bun add tailwindcss @tailwindcss/vite");
-
-// Add Tailwind CSS to the Vite config file
-console.log("Configuring Tailwind CSS...");
-const viteConfigPath = path.join(PROJECT_PATH, "vite.config.ts"); // Change to .js if needed
+// Amending the Vite config file
+console.log("Loading Vite config file...");
+const viteConfigPath = path.join(PROJECT_PATH, "vite.config.ts");
 console.log("viteConfigPath: ", viteConfigPath);
 
 // Read the Vite config file
 let viteConfigContent = fs.readFileSync(viteConfigPath, "utf-8");
-
-// Modify the Vite config file
-console.log("Adding Tailwind CSS import...");
 const lines = viteConfigContent.split("\n");
+
+// Add a import at first line
+const pathImportLine = `import path from "path";`;
+lines.splice(0, 0, pathImportLine);
+
+// Adding Tailwind CSS Package
+console.log(`Adding Tailwind CSS for ${PROJECT_NAME}`);
+execSync("bun add tailwindcss @tailwindcss/vite");
+
+// Add Tailwind CSS to the Vite config file
+console.log("Adding Tailwind CSS import...");
 const tailwindImportLine = "import tailwindcss from '@tailwindcss/vite'";
-const insertIndex = 2;
+const insertIndex = 3;
 lines.splice(insertIndex, 0, tailwindImportLine);
 viteConfigContent = lines.join("\n");
 
@@ -88,6 +92,24 @@ viteConfigContent = viteConfigContent.replace(
   /plugins:\s*\[\s*react\(\)\s*\]/,
   "plugins: [react(), tailwindcss()]"
 );
+
+// Add server configuration after plugins
+console.log("Adding server configuration...");
+if (!/server:\s*\{/.test(viteConfigContent)) {
+  viteConfigContent = viteConfigContent.replace(
+    /plugins:\s*\[.*?\]\s*,/s, // Match plugins array
+    match => `${match}\n  server: {\n    port: 51731,\n  },`
+  );
+}
+
+// Add resolve configuration after server
+console.log("Adding resolve configuration...");
+if (!/resolve:\s*\{/.test(viteConfigContent)) {
+  viteConfigContent = viteConfigContent.replace(
+    /server:\s*\{[^}]*\},/s, // Match server block
+    match => `${match}\n  resolve: {\n    alias: {\n      "@": path.resolve(__dirname, "src"),\n    },\n  },`
+  );
+}
 
 // Write the modified Vite config file
 fs.writeFileSync(viteConfigPath, viteConfigContent, "utf-8");
