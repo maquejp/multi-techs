@@ -91,19 +91,50 @@ export const tmdbGetApiUrl = (context: string): string => {
   return categoryEndpoints[endpointStr as keyof typeof categoryEndpoints]();
 };
 
+export type tmdbReponseResultType = {
+  adult: boolean;
+  backdrop_path: string;
+  genre_ids: number[];
+  id: number;
+  original_language: string;
+  original_title: string;
+  overview: string;
+  popularity: number;
+  poster_path: string;
+  release_date: string;
+  title: string;
+  video: boolean;
+  vote_average: number;
+  vote_count: number;
+};
+
+export type tmdbFetchDataType = {
+  message: string;
+  status: number;
+  data?: {
+    page: number;
+    results: tmdbReponseResultType[];
+    total_pages: number;
+    total_results: number;
+  };
+};
+
 /**
  * Get data from the TMDB API
  * @param context - Context in dot notation format, e.g. 'movie.popular'
  * @returns Data from the TMDB API
  */
-export const tmdbFetchData = async (context: string) => {
+export const tmdbFetchData = async (
+  context: string
+): Promise<tmdbFetchDataType> => {
   try {
     const response = await axios.get(tmdbGetApiUrl(context));
-    const data = await response.data;
-    return data;
+    return { message: "Success", status: 200, data: response.data };
   } catch (error) {
-    console.log(error);
-    return [];
+    if (axios.isAxiosError(error) && error.response) {
+      return { message: "Error", status: error.response.status };
+    }
+    return { message: "Error", status: 500 };
   }
 };
 

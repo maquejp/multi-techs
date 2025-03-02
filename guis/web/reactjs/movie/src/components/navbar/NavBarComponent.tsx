@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import appEnv from "@/helpers/env_helper";
-import tmdbFetchData from "@/helpers/tmdb_api_helper";
+import tmdbFetchData, { tmdbFetchDataType } from "@/helpers/tmdb_api_helper";
 import logo from "@/assets/logo.png";
 import DesktopNavComponent from "./DesktopNavComponent";
 import MobileNavComponent from "./MobileNavComponent";
@@ -23,13 +23,23 @@ const Navbar = () => {
 
   const fetchMovies = async (context: string) => {
     try {
-      const data = await tmdbFetchData(context);
-      const randomIndex = Math.floor(Math.random() * data.results.length);
-      setMovieData({
-        media: data.results[randomIndex]?.backdrop_path || "",
-        title: data.results[randomIndex]?.title || data.results[0]?.name || "",
-        overview: data.results[randomIndex]?.overview || "",
-      });
+      const response: tmdbFetchDataType = await tmdbFetchData(context);
+      if (response.status === 200) {
+        if (response.data) {
+          if (response.data.results) {
+            const results = response.data.results;
+            const randomIndex = Math.floor(Math.random() * results.length);
+            setMovieData({
+              media: results[randomIndex]?.backdrop_path || "",
+              title: results[randomIndex]?.title || "",
+              overview: results[randomIndex]?.overview || "",
+            });
+          }
+          // const randomIndex = Math.floor(Math.random() * data.results.length);
+        } else {
+          console.log("no results!");
+        }
+      }
     } catch (error) {
       console.log(error);
     }
