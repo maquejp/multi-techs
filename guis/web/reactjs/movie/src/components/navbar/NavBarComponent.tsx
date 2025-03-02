@@ -35,7 +35,6 @@ const Navbar = () => {
               overview: results[randomIndex]?.overview || "",
             });
           }
-          // const randomIndex = Math.floor(Math.random() * data.results.length);
         } else {
           console.log("no results!");
         }
