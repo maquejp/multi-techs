@@ -7,13 +7,13 @@ import MobileNavComponent from "./MobileNavComponent";
 import MovieDetailsComponent from "../MovieDetailsComponent";
 
 const Navbar = () => {
-  type MovieData = {
+  type MovieDataType = {
     media: string;
     title: string;
     overview: string;
   };
 
-  const [movieData, setMovieData] = useState<MovieData>({
+  const [movieData, setMovieData] = useState<MovieDataType>({
     media: "",
     title: "",
     overview: "",
@@ -60,7 +60,7 @@ const Navbar = () => {
     >
       <div className="fixed p-6 left-0 top-0 w-full z-50 bg-gradient-to-b from-black/70 to-transparent">
         <div className="flex justify-between items-center h-24 px-6">
-          <img src={logo} alt="logo" className="w-32 lg:w-40 xl:w-48" />
+          <img src={logo} alt="logo" className="w-32 lg:w-40 xl:w-48 mt-20" />
           <DesktopNavComponent />
           <button
             className="block md:hidden text-white text-3xl"
