@@ -11,6 +11,17 @@ const API_KEY = appEnv.API_KEY;
 // Define types for our API URIs structure
 type EndpointFunction = () => string;
 
+export enum TmdbContext {
+  MoviePopular = "movie.popular",
+  MovieUpcoming = "movie.upcoming",
+  MovieTopRated = "movie.topRated",
+  MovieNowPlaying = "movie.nowPlaying",
+  TvPopular = "tv.popular",
+  TvTrendingWeek = "tv.trendingWeek",
+  TvTopRated = "tv.topRated",
+  TvAiringToday = "tv.airingToday",
+}
+
 // Define types for our API URIs structure: Movie
 interface MovieEndpoints {
   popular: EndpointFunction;
@@ -96,7 +107,7 @@ export const tmdbGetApiUrl = (context: string): string => {
  * @returns Data from the TMDB API
  */
 export const tmdbFetchData = async (
-  context: string
+  context: TmdbContext
 ): Promise<tmdbFetchMovieType> => {
   try {
     const apiUrl = tmdbGetApiUrl(context);

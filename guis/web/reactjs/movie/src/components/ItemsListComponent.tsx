@@ -1,19 +1,36 @@
+import appEnv from "@/helpers/env_helper";
+import { tmdbApiReponseResultType } from "@/interfaces/tmdb_interfaces";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
-const ItemsListComponent = ({ title }: { title: string }) => {
+const ItemsListComponent = ({
+  title,
+  list,
+}: {
+  title: string;
+  list: tmdbApiReponseResultType[];
+}) => {
   return (
-    <div>
-      <h1 className="text-2xl font-bold">{title}</h1>
+    <div className="m-8">
+      <h1 className="text-2xl font-bold pb-4">{title}</h1>
       <div className="grid grid-cols-5 gap-4">
-        {[1, 2, 3, 4, 5].map((item) => (
-          <div key={item} className="bg-gray-700 rounded-lg p-4">
+        {list.slice(0, 5).map((item) => (
+          <div key={item.id} className="bg-gray-700 rounded-lg p-4">
+            <div className="text-sm rounded-full bg-amber-400 text-black text-center w-1/4 mb-2">
+              {Math.round(item.vote_average * 10) / 10}
+            </div>
             <img
-              src="https://via.placeholder.com/150"
-              alt={`Item ${item}`}
+              src={appEnv.API_IMG_URL + item?.poster_path}
+              alt={`${item.backdrop_path}`}
               className="w-full h-auto rounded-lg"
             />
-            <h2 className="text-lg font-semibold mt-2">Item {item}</h2>
-            <p className="text-sm">Description of item {item}</p>
+            <h2 className="text-lg font-semibold mt-2">
+              {" "}
+              {item.title ? item.title : item.name}
+            </h2>
+            <p className="text-sm">
+              {item.overview.slice(0, 100)}
+              {item.overview.length > 100 ? "..." : ""}
+            </p>
           </div>
         ))}
       </div>

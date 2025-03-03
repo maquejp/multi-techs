@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import appEnv from "@/helpers/env_helper";
-import tmdbFetchData from "@/helpers/tmdb_api_helper";
+import tmdbFetchData, { TmdbContext } from "@/helpers/tmdb_api_helper";
 import logo from "@/assets/logo.png";
 import DesktopNavComponent from "./DesktopNavComponent";
 import MobileNavComponent from "./MobileNavComponent";
@@ -17,7 +17,7 @@ const Navbar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const fetchMovies = async (context: string) => {
+  const fetchMovies = async (context: TmdbContext) => {
     try {
       const response: tmdbFetchMovieType = await tmdbFetchData(context);
 
@@ -36,9 +36,9 @@ const Navbar = () => {
 
   useEffect(() => {
     const currentPage = location.pathname;
-    if (currentPage === "/") fetchMovies("movie.popular");
-    if (currentPage === "/movies") fetchMovies("movie.popular");
-    if (currentPage === "/tv") fetchMovies("tv.popular");
+    if (currentPage === "/") fetchMovies(TmdbContext.MovieNowPlaying);
+    if (currentPage === "/movies") fetchMovies(TmdbContext.MoviePopular);
+    if (currentPage === "/tv") fetchMovies(TmdbContext.TvPopular);
   }, []);
 
   return (
