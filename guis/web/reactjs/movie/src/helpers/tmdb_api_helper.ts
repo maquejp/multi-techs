@@ -1,6 +1,9 @@
 import axios from "axios";
 import appEnv from "./env_helper";
-import { tmdbFetchDataType } from "@/types/tmdb_fetch_data_type";
+import {
+  tmdbMovieResponseType,
+  tmdbFetchMovieType,
+} from "@/interfaces/tmdb_interfaces";
 
 const BASE_URL = appEnv.API_URL;
 const API_KEY = appEnv.API_KEY;
@@ -99,9 +102,19 @@ export const tmdbGetApiUrl = (context: string): string => {
  */
 export const tmdbFetchData = async (
   context: string
-): Promise<tmdbFetchDataType> => {
+): Promise<tmdbFetchMovieType> => {
   try {
-    const response = await axios.get(tmdbGetApiUrl(context));
+    const apiUrl = tmdbGetApiUrl(context);
+    const response = await axios.get<tmdbMovieResponseType>(apiUrl);
+    if (response.status !== 200) {
+      return { message: "Error", status: response.status };
+    }
+    if (!response.data) {
+      return { message: "Error: No data", status: 500 };
+    }
+    if (!response.data.results) {
+      return { message: "Error: No results", status: 500 };
+    }
     return { message: "Success", status: 200, data: response.data };
   } catch (error) {
     if (axios.isAxiosError(error) && error.response) {

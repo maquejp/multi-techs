@@ -1,7 +1,11 @@
-import { MovieDataType } from "@/types/movie_data_type";
+import { tmdbApiReponseResultType } from "@/types/tmdb_response_result_type";
 import InfoIcon from "@mui/icons-material/Info";
 
-const MovieDetailsComponent = ({ data }: { data: MovieDataType }) => {
+const MovieHeroDetailsComponent = ({
+  data,
+}: {
+  data: tmdbApiReponseResultType;
+}) => {
   return (
     <div className="absolute inset-0 flex flex-col items-start justify-center text-left px-8 bg-black/50">
       <h1 className="text-5xl font-bold mb-4 space tracking-wide">
@@ -16,4 +20,4 @@ const MovieDetailsComponent = ({ data }: { data: MovieDataType }) => {
   );
 };
 
-export default MovieDetailsComponent;
+export default MovieHeroDetailsComponent;

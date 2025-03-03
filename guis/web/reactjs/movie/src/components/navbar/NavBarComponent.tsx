@@ -4,37 +4,31 @@ import tmdbFetchData from "@/helpers/tmdb_api_helper";
 import logo from "@/assets/logo.png";
 import DesktopNavComponent from "./DesktopNavComponent";
 import MobileNavComponent from "./MobileNavComponent";
-import MovieDetailsComponent from "../MovieDetailsComponent";
-import { MovieDataType } from "@/types/movie_data_type";
-import { tmdbFetchDataType } from "@/types/tmdb_fetch_data_type";
+import MovieHeroDetailsComponent from "../MovieDetailsComponent";
+import {
+  tmdbApiReponseResultType,
+  tmdbFetchMovieType,
+} from "@/interfaces/tmdb_interfaces";
 
 const Navbar = () => {
-  const [movieData, setMovieData] = useState<MovieDataType>({
-    media: "",
-    title: "",
-    overview: "",
-  });
+  const [movieData, setMovieData] = useState<tmdbApiReponseResultType | null>(
+    null
+  );
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const fetchMovies = async (context: string) => {
     try {
-      const response: tmdbFetchDataType = await tmdbFetchData(context);
-      if (response.status === 200) {
-        if (response.data) {
-          if (response.data.results) {
-            const results = response.data.results;
-            const randomIndex = Math.floor(Math.random() * results.length);
-            setMovieData({
-              media: results[randomIndex]?.backdrop_path || "",
-              title: results[randomIndex]?.title || "",
-              overview: results[randomIndex]?.overview || "",
-            });
-          }
-        } else {
-          console.log("no results!");
-        }
+      const response: tmdbFetchMovieType = await tmdbFetchData(context);
+
+      if (response.status !== 200 || !response.data || !response.data.results) {
+        console.log(response.message);
+        return;
       }
+
+      const results: tmdbApiReponseResultType[] = response.data.results;
+      const randomIndex = Math.floor(Math.random() * results.length);
+      setMovieData(results[randomIndex]);
     } catch (error) {
       console.log(error);
     }
@@ -51,7 +45,7 @@ const Navbar = () => {
     <div
       className="relative bg-cover bg-center bg-no-repeat h-screen text-white"
       style={{
-        backgroundImage: `url(${appEnv.API_IMG_URL}${movieData.media})`,
+        backgroundImage: `url(${appEnv.API_IMG_URL}${movieData?.backdrop_path})`,
       }}
     >
       <div className="fixed p-6 left-0 top-0 w-full z-50 bg-gradient-to-b from-black/70 to-transparent">
@@ -76,9 +70,7 @@ const Navbar = () => {
       )}
 
       {/* Movie Details */}
-      {movieData && movieData.title && (
-        <MovieDetailsComponent data={movieData} />
-      )}
+      {movieData && <MovieHeroDetailsComponent data={movieData} />}
     </div>
   );
 };
