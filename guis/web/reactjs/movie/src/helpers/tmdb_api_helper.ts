@@ -11,6 +11,7 @@ const API_KEY = appEnv.API_KEY;
 // Define types for our API URIs structure
 type EndpointFunction = () => string;
 
+// Define types for our API URIs structure: Movie
 interface MovieEndpoints {
   popular: EndpointFunction;
   upcoming: EndpointFunction;
@@ -18,6 +19,7 @@ interface MovieEndpoints {
   nowPlaying: EndpointFunction;
 }
 
+// Define types for our API URIs structure: TV
 interface TvEndpoints {
   popular: EndpointFunction;
   trendingWeek: EndpointFunction;
@@ -25,6 +27,7 @@ interface TvEndpoints {
   airingToday: EndpointFunction;
 }
 
+// Define types for our API URIs structure
 interface TmdbApiUris {
   movie: MovieEndpoints;
   tv: TvEndpoints;
@@ -34,6 +37,7 @@ type Category = keyof TmdbApiUris;
 
 const urlSearchParamsApiKey = new URLSearchParams({ api_key: API_KEY });
 
+// Define our API URIs
 const tmdbApiUris: TmdbApiUris = {
   movie: {
     popular: (): string => `${BASE_URL}/movie/popular?${urlSearchParamsApiKey}`,
