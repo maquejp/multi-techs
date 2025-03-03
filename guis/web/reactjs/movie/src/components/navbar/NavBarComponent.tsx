@@ -1,18 +1,14 @@
 import { useState, useEffect } from "react";
 import appEnv from "@/helpers/env_helper";
-import tmdbFetchData, { tmdbFetchDataType } from "@/helpers/tmdb_api_helper";
+import tmdbFetchData from "@/helpers/tmdb_api_helper";
 import logo from "@/assets/logo.png";
 import DesktopNavComponent from "./DesktopNavComponent";
 import MobileNavComponent from "./MobileNavComponent";
 import MovieDetailsComponent from "../MovieDetailsComponent";
+import { MovieDataType } from "@/types/movie_data_type";
+import { tmdbFetchDataType } from "@/types/tmdb_fetch_data_type";
 
 const Navbar = () => {
-  type MovieDataType = {
-    media: string;
-    title: string;
-    overview: string;
-  };
-
   const [movieData, setMovieData] = useState<MovieDataType>({
     media: "",
     title: "",

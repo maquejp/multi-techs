@@ -1,5 +1,6 @@
 import axios from "axios";
 import appEnv from "./env_helper";
+import { tmdbFetchDataType } from "@/types/tmdb_fetch_data_type";
 
 const BASE_URL = appEnv.API_URL;
 const API_KEY = appEnv.API_KEY;
@@ -89,34 +90,6 @@ export const tmdbGetApiUrl = (context: string): string => {
 
   // Access the function directly
   return categoryEndpoints[endpointStr as keyof typeof categoryEndpoints]();
-};
-
-export type tmdbReponseResultType = {
-  adult: boolean;
-  backdrop_path: string;
-  genre_ids: number[];
-  id: number;
-  original_language: string;
-  original_title: string;
-  overview: string;
-  popularity: number;
-  poster_path: string;
-  release_date: string;
-  title: string;
-  video: boolean;
-  vote_average: number;
-  vote_count: number;
-};
-
-export type tmdbFetchDataType = {
-  message: string;
-  status: number;
-  data?: {
-    page: number;
-    results: tmdbReponseResultType[];
-    total_pages: number;
-    total_results: number;
-  };
 };
 
 /**

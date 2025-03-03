@@ -1,12 +1,7 @@
+import { MovieDataType } from "@/types/movie_data_type";
 import InfoIcon from "@mui/icons-material/Info";
 
-type MovieData = {
-  media: string;
-  title: string;
-  overview: string;
-};
-
-const MovieDetailsComponent = ({ data }: { data: MovieData }) => {
+const MovieDetailsComponent = ({ data }: { data: MovieDataType }) => {
   return (
     <div className="absolute inset-0 flex flex-col items-start justify-center text-left px-8 bg-black/50">
       <h1 className="text-5xl font-bold mb-4 space tracking-wide">
