@@ -12,7 +12,7 @@ const MovieHeroDetailsComponent = ({
         {data.title}
       </h1>
       <p className="text-xl max-w-3xl">{data.overview}</p>
-      <button className="mt-4 p-2 bg-[#9d9a96ac] font-bold rounded-lg duration-300 ease-in-out hover:bg-white hover:text-black flex flex-row-reverse items-center justify-around w-32">
+      <button className="mt-4 p-2 bg-[#9d9a96ac] font-bold rounded-lg duration-300 ease-in-out hover:bg-white hover:text-black flex flex-row-reverse items-center justify-around w-32 cursor-pointer">
         More info
         <InfoIcon />
       </button>

@@ -14,9 +14,12 @@ const ItemsListComponent = ({
       <h1 className="text-2xl font-bold pb-4">{title}</h1>
       <div className="grid grid-cols-5 gap-4">
         {list.slice(0, 5).map((item) => (
-          <div key={item.id} className="bg-gray-700 rounded-lg p-4">
+          <div
+            key={item.id}
+            className="bg-gray-700 rounded-lg p-4  hover:scale-105 cursor-pointer duration-300 ease-in-out"
+          >
             <div className="text-sm rounded-full bg-amber-400 text-black text-center w-1/4 mb-2">
-              {Math.round(item.vote_average * 10) / 10}
+              {item.vote_average.toFixed(1)}
             </div>
             <img
               src={appEnv.API_IMG_URL + item?.poster_path}
@@ -34,7 +37,7 @@ const ItemsListComponent = ({
           </div>
         ))}
       </div>
-      <button className="mt-4 p-2 bg-[#9d9a96ac] font-bold rounded-lg duration-300 ease-in-out hover:bg-white hover:text-black flex flex-row items-center justify-around w-32">
+      <button className="mt-4 p-2 bg-[#9d9a96ac] font-bold rounded-lg duration-300 ease-in-out hover:bg-white hover:text-black flex flex-row items-center justify-around w-32 cursor-pointer">
         More
         <MoreHorizIcon />
       </button>
