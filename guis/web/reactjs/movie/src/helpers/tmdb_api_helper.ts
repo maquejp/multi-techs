@@ -1,5 +1,5 @@
 import axios from "axios";
-import appEnv from "./env_helper";
+import appEnv from "@/helpers/env_helper";
 import {
   tmdbMovieResponseType,
   tmdbFetchMovieType,
@@ -32,34 +32,25 @@ interface TmdbApiUris {
 
 type Category = keyof TmdbApiUris;
 
+const urlSearchParamsApiKey = new URLSearchParams({ api_key: API_KEY });
+
 const tmdbApiUris: TmdbApiUris = {
   movie: {
-    popular: (): string =>
-      `${BASE_URL}/movie/popular?${new URLSearchParams({ api_key: API_KEY })}`,
+    popular: (): string => `${BASE_URL}/movie/popular?${urlSearchParamsApiKey}`,
     upcoming: (): string =>
-      `${BASE_URL}/movie/upcoming?${new URLSearchParams({ api_key: API_KEY })}`,
+      `${BASE_URL}/movie/upcoming?${urlSearchParamsApiKey}`,
     topRated: (): string =>
-      `${BASE_URL}/movie/top_rated?${new URLSearchParams({
-        api_key: API_KEY,
-      })}`,
+      `${BASE_URL}/movie/top_rated?${urlSearchParamsApiKey}`,
     nowPlaying: (): string =>
-      `${BASE_URL}/movie/now_playing?${new URLSearchParams({
-        api_key: API_KEY,
-      })}`,
+      `${BASE_URL}/movie/now_playing?${urlSearchParamsApiKey}`,
   },
   tv: {
-    popular: (): string =>
-      `${BASE_URL}/tv/popular?${new URLSearchParams({ api_key: API_KEY })}`,
+    popular: (): string => `${BASE_URL}/tv/popular?${urlSearchParamsApiKey}`,
     trendingWeek: (): string =>
-      `${BASE_URL}/trending/tv/week?${new URLSearchParams({
-        api_key: API_KEY,
-      })}`,
-    topRated: (): string =>
-      `${BASE_URL}/tv/top_rated?${new URLSearchParams({ api_key: API_KEY })}`,
+      `${BASE_URL}/trending/tv/week?${urlSearchParamsApiKey}`,
+    topRated: (): string => `${BASE_URL}/tv/top_rated?${urlSearchParamsApiKey}`,
     airingToday: (): string =>
-      `${BASE_URL}/tv/airing_today?${new URLSearchParams({
-        api_key: API_KEY,
-      })}`,
+      `${BASE_URL}/tv/airing_today?${urlSearchParamsApiKey}`,
   },
 };
 
