@@ -1,4 +1,4 @@
-import { tmdbApiReponseResultType } from "@/types/tmdb_response_result_type";
+import { tmdbApiReponseResultType } from "@/interfaces/tmdb_interfaces";
 import InfoIcon from "@mui/icons-material/Info";
 
 const MovieHeroDetailsComponent = ({
