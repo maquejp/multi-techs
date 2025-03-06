@@ -11,6 +11,7 @@ const MoviesPage = () => {
       <ItemsListComponent
         title="Popular Movies"
         tbdContext={TmdbContext.MoviePopular}
+        nbItems={10}
       />
       <ItemsListComponent
         title="Upcoming Movie"

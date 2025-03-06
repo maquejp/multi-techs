@@ -9,10 +9,15 @@ import { useEffect, useState } from "react";
 
 interface ItemsListComponentProps {
   title: string;
-  tbdContext: TmdbContext; // Add the context prop here
+  tbdContext: TmdbContext;
+  nbItems?: number;
 }
 
-const ItemsListComponent = ({ title, tbdContext }: ItemsListComponentProps) => {
+const ItemsListComponent = ({
+  title,
+  tbdContext,
+  nbItems = 5,
+}: ItemsListComponentProps) => {
   const [list, setList] = useState<tmdbApiReponseResultType[]>([]);
 
   useEffect(() => {
@@ -40,7 +45,7 @@ const ItemsListComponent = ({ title, tbdContext }: ItemsListComponentProps) => {
     <div className="m-8">
       <h1 className="text-2xl font-bold pb-4">{title}</h1>
       <div className="grid grid-cols-5 gap-4">
-        {list.slice(0, 5).map((item) => (
+        {list.slice(0, nbItems).map((item) => (
           <div
             key={item.id}
             className="bg-gray-700 rounded-lg p-4  hover:scale-105 cursor-pointer duration-300 ease-in-out"

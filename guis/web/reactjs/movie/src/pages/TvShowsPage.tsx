@@ -11,6 +11,7 @@ const TvShowsPages = () => {
       <ItemsListComponent
         title="Popular Shows"
         tbdContext={TmdbContext.TvPopular}
+        nbItems={10}
       />
       <ItemsListComponent
         title="Airing Today"
