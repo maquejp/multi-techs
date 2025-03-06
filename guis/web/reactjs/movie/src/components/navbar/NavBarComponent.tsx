@@ -9,15 +9,18 @@ import {
   tmdbApiReponseResultType,
   tmdbFetchMovieType,
 } from "@/interfaces/tmdb_interfaces";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  const [movieData, setMovieData] = useState<tmdbApiReponseResultType | null>(
+  const location = useLocation();
+
+  const [heroData, setHeroData] = useState<tmdbApiReponseResultType | null>(
     null
   );
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const fetchMovies = async (context: TmdbContext) => {
+  const fetchHeroData = async (context: TmdbContext) => {
     try {
       const response: tmdbFetchMovieType = await tmdbFetchData(context);
 
@@ -28,7 +31,7 @@ const Navbar = () => {
 
       const results: tmdbApiReponseResultType[] = response.data.results;
       const randomIndex = Math.floor(Math.random() * results.length);
-      setMovieData(results[randomIndex]);
+      setHeroData(results[randomIndex]);
     } catch (error) {
       console.log(error);
     }
@@ -36,16 +39,22 @@ const Navbar = () => {
 
   useEffect(() => {
     const currentPage = location.pathname;
-    if (currentPage === "/") fetchMovies(TmdbContext.MovieNowPlaying);
-    if (currentPage === "/movies") fetchMovies(TmdbContext.MoviePopular);
-    if (currentPage === "/tv") fetchMovies(TmdbContext.TvPopular);
-  }, []);
+    if (currentPage === "/") {
+      fetchHeroData(TmdbContext.MovieNowPlaying);
+    } else if (currentPage === "/movies") {
+      fetchHeroData(TmdbContext.MoviePopular);
+    } else if (currentPage === "/tv") {
+      fetchHeroData(TmdbContext.TvPopular);
+    } else {
+      fetchHeroData(TmdbContext.MovieNowPlaying);
+    }
+  }, [location.pathname]);
 
   return (
     <div
       className="relative bg-cover bg-center bg-no-repeat h-screen text-white"
       style={{
-        backgroundImage: `url(${appEnv.API_IMG_URL}${movieData?.backdrop_path})`,
+        backgroundImage: `url(${appEnv.API_IMG_URL}${heroData?.backdrop_path})`,
       }}
     >
       <div className="fixed p-6 left-0 top-0 w-full z-50 bg-gradient-to-b from-black/70 to-transparent">
@@ -70,7 +79,7 @@ const Navbar = () => {
       )}
 
       {/* Movie Details */}
-      {movieData && <MovieHeroDetailsComponent data={movieData} />}
+      {heroData && <MovieHeroDetailsComponent data={heroData} />}
     </div>
   );
 };
