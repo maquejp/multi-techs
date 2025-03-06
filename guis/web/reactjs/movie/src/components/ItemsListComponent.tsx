@@ -1,14 +1,41 @@
 import appEnv from "@/helpers/env_helper";
-import { tmdbApiReponseResultType } from "@/interfaces/tmdb_interfaces";
+import tmdbFetchData, { TmdbContext } from "@/helpers/tmdb_api_helper";
+import {
+  tmdbApiReponseResultType,
+  tmdbFetchMovieType,
+} from "@/interfaces/tmdb_interfaces";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import { useEffect, useState } from "react";
 
-const ItemsListComponent = ({
-  title,
-  list,
-}: {
+interface ItemsListComponentProps {
   title: string;
-  list: tmdbApiReponseResultType[];
-}) => {
+  tbdContext: TmdbContext; // Add the context prop here
+}
+
+const ItemsListComponent = ({ title, tbdContext }: ItemsListComponentProps) => {
+  const [list, setList] = useState<tmdbApiReponseResultType[]>([]);
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      try {
+        const response: tmdbFetchMovieType = await tmdbFetchData(tbdContext);
+        if (
+          response.status !== 200 ||
+          !response.data ||
+          !response.data.results
+        ) {
+          setList([]);
+          return;
+        }
+        setList(response.data.results);
+      } catch (error) {
+        setList([]);
+        console.log(error);
+      }
+    };
+    fetchMovies();
+  }, [tbdContext]);
+
   return (
     <div className="m-8">
       <h1 className="text-2xl font-bold pb-4">{title}</h1>
