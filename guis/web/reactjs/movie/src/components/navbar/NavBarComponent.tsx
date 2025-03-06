@@ -50,7 +50,7 @@ const Navbar = () => {
     >
       <div className="fixed p-6 left-0 top-0 w-full z-50 bg-gradient-to-b from-black/70 to-transparent">
         <div className="flex justify-between items-center h-24 px-6">
-          <img src={logo} alt="logo" className="w-32 lg:w-40 xl:w-48 mt-20" />
+          <img src={logo} alt="logo" className="w-24" />
           <DesktopNavComponent />
           <button
             className="block md:hidden text-white text-3xl"
