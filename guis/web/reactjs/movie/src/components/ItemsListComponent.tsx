@@ -55,7 +55,8 @@ const ItemsListComponent = ({
             </div>
             <img
               src={appEnv.API_IMG_URL + item?.poster_path}
-              alt={`${item.backdrop_path}`}
+              alt={item.title ? item.title : item.name}
+              title={item.title ? item.title : item.name}
               className="w-full h-auto rounded-lg"
             />
             <h2 className="text-lg font-semibold mt-2">
