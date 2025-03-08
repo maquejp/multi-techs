@@ -10,6 +10,7 @@
     "vue.volar",
     "astro-build.astro-vscode",
     "mongodb.mongodb-vscode",
-    "vscjava.vscode-java-pack"
+    "vscjava.vscode-java-pack",
+    "yzhang.markdown-all-in-one"
   ]
 }
