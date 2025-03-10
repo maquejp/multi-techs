@@ -2,7 +2,8 @@ import { execSync } from "child_process";
 import { customiseProject } from "./utils/customising-project";
 import { createSuggestedFolderStructure } from "./utils/folder-structure";
 import { initialiseFramework } from "./utils/initialise-framework";
-import { preparePath } from "./utils/paths";
+import { preparePath } from "../../../common/paths";
+import path from "path";
 
 async function main() {
     // Validate input arguments
@@ -14,7 +15,7 @@ async function main() {
     // Get the project name and path
     const PROJECT_NAME = process.argv[2];
 
-    const paths = await preparePath(PROJECT_NAME);
+    const paths = await preparePath(path.dirname(__filename), PROJECT_NAME);
     if (paths.error) {
         console.error(paths.message);
         process.exit(1);

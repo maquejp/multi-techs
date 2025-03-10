@@ -1,17 +1,21 @@
 import path from "path";
 import fs from "fs";
 
-export async function preparePath(PROJECT_NAME) {
+export async function preparePath(DIRNAME, PROJECT_NAME) {
     console.log(`Preparing path for project: ${PROJECT_NAME}`);
     try {
         // Get the absolute path to the _tools folder, where the setup script is located
-        const TOOLS_PATH = path.dirname(__filename).replace("/utils", "");
+        const TOOLS_PATH = DIRNAME.replace("/utils", "");
+        console.log("ⓘ TOOLS_PATH: ", TOOLS_PATH);
+
 
         // Remove "/_tools" from the TOOLS_PATH to get the correct destination folder for the Vite project
-        const GUIS_BASE_PATH = TOOLS_PATH.replace("/_tools", "").replace("/utils", "");
+        const GUIS_BASE_PATH = TOOLS_PATH.replace("/_tools", "");
+        console.log("ⓘ GUIS_BASE_PATH: ", GUIS_BASE_PATH);
 
         // Create the path to the new project
         const PROJECT_PATH = path.join(GUIS_BASE_PATH, PROJECT_NAME);
+        console.log("ⓘ PROJECT_PATH: ", PROJECT_PATH);
 
         const response = await createPath(GUIS_BASE_PATH);
         if (response.error) {

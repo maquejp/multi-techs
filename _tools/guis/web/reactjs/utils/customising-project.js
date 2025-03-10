@@ -136,9 +136,18 @@ export async function updateCleanAppTsxt(PROJECT_PATH, FORMATTED_PROJECT_NAME) {
         );
 
         console.log("🔧 Update the App.tsx content...");
+        const formattedDate = new Date().toLocaleString('en-GB', {
+            day: '2-digit',
+            month: 'short',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            hourCycle: 'h23'
+        }).replace(',', '');
+
         const updatedAppTsContent = appTsContent.replace(
             /(<>\s*)(.*?)(\s*<\/>)/s, // Match everything inside the fragment, including spaces
-            `<div className="h-screen w-full flex items-center justify-center"><h1 className="text-3xl font-bold underline">${FORMATTED_PROJECT_NAME} with reactjs (vite)</h1></div>`
+            `<div><div className="h-1/3 w-full flex items-center justify-center"><h1 className="text-3xl font-bold underline">${FORMATTED_PROJECT_NAME} with reactjs (vite)</h1></div><div><p className="mt-4 text-gray-500 text-3xl">${formattedDate}</p></div></div>`
         );
         writeFileSync(appTsPath, updatedAppTsContent, "utf-8");
         console.log("✅ The App.tsx has been updated");
