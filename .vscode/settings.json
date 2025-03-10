@@ -1,0 +1,24 @@
+{
+  "conventionalCommits.scopes": [
+    "GLOBAL",
+    "GUIS/WEB/ALL",
+    "GUIS/WEB/REACTJS/VITE",
+    "GUIS/WEB/ANGULAR",
+    "GUIS/WEB/SVELTE/VITE",
+    "GUIS/WEB/VUE/VITE",
+    "GUIS/WEB/ASTRO",
+    "DATABASES/ALL",
+    "DATABASES/MONGODB",
+    "DATABASES/POSTGRESQL",
+    "DATABASES/MARIADB",
+    "DATABASES/ORACLE",
+    "BACKENDS/ALL",
+    "BACKENDS/EXPRESSJS",
+    "BACKENDS/SPRINGBOOT",
+    "BACKENDS/APIPLATFORM",
+    "DOCUMENTATION/ALL",
+    "DOCUMENTATION/MOVIE",
+    "GUIS/WEB/REACTJS/MOVIE"
+  ],
+  "java.compile.nullAnalysis.mode": "automatic"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "multitech",
+  "version": "1.0.0",
+  "description": "The goal of this project is to displays multiples ways to build the same applications using different technologies.",
+  "main": "index.js",
+  "scripts": {
+    "common:generate:fs": "bun run ./_tools/common/add-folder-struc-to-md.js",
+    "common:generate:fs:all": "bun run ./_tools/common/update-folder-struc-all-md.js",
+    "setup:guis:web:angular": "bun run ./_tools/guis/web/angular/setup-project.js",
+    "setup:guis:web:astro": "bun run ./_tools/guis/web/astro/setup-project.js",
+    "setup:guis:web:reactjs": "bun run ./_tools/guis/web/reactjs/setup-project.js",
+    "setup:guis:web:svelte": "bun run ./_tools/guis/web/svelte/setup-project.js",
+    "setup:guis:web:vuejs": "bun run ./_tools/guis/web/vuejs/setup-project.js",
+    "setup:database:start:mariadb": "bun run ./_tools/databases/mariadb/start-mariadb.js",
+    "setup:database:start:mongodb": "bun run ./_tools/databases/mongodb/start-mongodb.js",
+    "setup:database:start:oracleenterprise": "bun run ./_tools/databases/oracleenterprise/start-oracleenterprise.js",
+    "setup:database:start:postgresql": "bun run ./_tools/databases/postgresql/start-postgresql.js",
+    "setup:backends:expressjs": "bun run ./_tools/backends/expressjs/setup-expressjs.js",
+    "setup:backends:springboot": "bun run ./_tools/backends/springboot/setup-springboot.js",
+    "setup:backends:apiplatform": "bun run ./_tools/backends/apiplatform/setup-apiplatform.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
