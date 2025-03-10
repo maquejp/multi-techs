@@ -48,7 +48,7 @@ async function main() {
 
     console.log("ⓘ Run the following command to start the development server:");
     console.log(`ⓘ cd ${PROJECT_NAME}`);
-    console.log("ⓘ npm run dev");
+    console.log("ⓘ bun run dev");
 
     console.log("🔧 Starting the development server...");
     execSync("bun run dev", { stdio: "inherit" });

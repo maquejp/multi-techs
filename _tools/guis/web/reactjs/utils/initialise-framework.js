@@ -39,7 +39,7 @@ export async function initialiseFramework(GUIS_BASE_PATH, PROJECT_PATH, PROJECT_
 }
 
 export async function setupFramework(PROJECT_PATH, PROJECT_NAME) {
-    console.log(`Setting up framework in ${PROJECT_PATH}`);
+    console.log(`🔧 Setting up framework in ${PROJECT_PATH}`);
     try {
         // Amending the Vite config file
         console.log("🔧 Loading Vite config file...");
